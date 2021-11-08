@@ -1,0 +1,86 @@
+package edu.kit.exp.server.gui.runtab;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.border.EmptyBorder;
+
+import edu.kit.exp.server.gui.mainframe.MainFrame;
+import edu.kit.exp.server.run.SessionRunException;
+
+/**
+ * Tab for running an experiment.
+ * 
+ */
+public class RunTab extends JPanel implements Observer {
+
+	private static final long serialVersionUID = -4150123067575255277L;
+
+	private static RunTab instance = new RunTab();
+	private JPanel textPanel;
+	private JPanel buttonPanel;
+	private RunTabController guiController = RunTabController.getInstance();
+	private JScrollPane scrollPane;
+	private JTextArea textArea;
+	private JButton btnContinue;
+
+	private RunTab() {
+		super();
+		setBorder(new EmptyBorder(20, 20, 20, 20));
+		guiController.addObserver(this);
+		init();
+	}
+
+	public static RunTab getInstance() {
+
+		return instance;
+	}
+
+	private void init() {
+
+		textPanel = new JPanel();
+		buttonPanel = new JPanel();
+		setLayout(new BorderLayout(0, 0));
+		textPanel.setLayout(new BorderLayout(0, 0));
+
+		textArea = new JTextArea();
+		scrollPane = new JScrollPane(textArea);
+		textPanel.add(scrollPane, BorderLayout.CENTER);
+		textArea.setEditable(false);
+
+		this.add(textPanel, BorderLayout.CENTER);
+		this.add(buttonPanel, BorderLayout.SOUTH);
+
+		btnContinue = new JButton("Continue");
+		btnContinue.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					guiController.startSession();
+				} catch (SessionRunException e) {
+					JOptionPane.showMessageDialog(MainFrame.getInstance(), e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+		buttonPanel.add(btnContinue);
+
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+
+		String msg = (String) arg;
+		textArea.append(msg);
+
+	}
+
+}

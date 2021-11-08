@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+<!-- ========================================================================
+     Prioritaeten der Loglevel: DEBUG < INFO < WARN < ERROR < FATAL
+
+     Formatierung der Log-Eintraege
+     %d = date                    Formatierung: ISO8601, DATE, ABSOLUTE
+     %p = priority = log level
+     %c = category = logger       {n}: Klassenname und n-1 Packages
+     %m = message
+     %n = new line
+     %r = milliseconds elapsed since application start
+     ======================================================================= -->
+
+<appender name="KONSOLE" class="org.apache.log4j.ConsoleAppender">
+	<param name="Threshold" value="TRACE"/>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%-5p %c{2} - %m%n"/>
+	</layout>
+</appender>
+
+<appender name="LOGDATEI" class="org.apache.log4j.RollingFileAppender">
+	<param name="File" value="@LOGDIR@/hibernate-tools.postgresql.log"/>
+	<param name="Append" value="true"/>
+	<param name="MaxFileSize" value="512KB"/>
+	<param name="MaxBackupIndex" value="2"/>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d{ISO8601} %-5p %c - %m%n"/>
+	</layout>
+</appender>
+
+<appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+	<appender-ref ref="LOGDATEI"/>
+</appender>
+
+<!-- ================================================ -->
+<!-- Loglevels fuer Packages                          -->
+<!-- ================================================ -->
+<category name="org.hibernate">
+	<priority value="INFO"/>
+</category>
+
+
+<!-- ================================================ -->
+<!-- Default-Einstellungen fuer Loglevel und Appender -->
+<!-- ================================================ -->
+<root>
+	<priority value="INFO"/>
+	<appender-ref ref="KONSOLE"/>
+	<appender-ref ref="LOGDATEI"/>
+</root>
+</log4j:configuration>

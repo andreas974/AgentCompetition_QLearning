@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE project>
+
+<project name="PostgreSQL" default="load" basedir=".">
+
+
+<!-- Individual Prpperties -->
+<property file="${basedir}/build.properties" />
+<property file="${basedir}/eclipseLink.properties"/>
+
+<!-- Classpath   -->
+<path id="jdbc.classpath">
+	<pathelement location="${basedir}/../../lib/postgresql-9.2-1002.jdbc4.jar"/>
+</path>
+
+
+<!-- CREATE USER -->
+<target name="create-user" description="User erzeugen">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+			CREATE USER ${eclipseLink.connection.username}
+			       PASSWORD '${eclipseLink.connection.password}';
+	</sql>
+</target>
+
+
+<!-- DELETE USER -->
+<target name="drop-user" description="User loeschen inkl. zugehoerige Objekte">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+			DROP USER IF EXISTS ${eclipseLink.connection.username};
+	</sql>
+</target>
+
+<!-- CREATE DB	 -->
+<target name="create-db" description="Datenbank erzeugen">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${db.admin.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 autocommit="true"
+		 classpathref="jdbc.classpath">
+		CREATE DATABASE ${db.name}
+	</sql>
+</target>
+
+<!-- CREATE TABLESPACE-->
+<target name="create-tablespace" description="Tablespace erzeugen">
+	<mkdir dir="${db.tablespace.dir}"/>
+	<exec executable="cacls" osfamily="windows">
+		<arg line="${db.tablespace.dir} /e /t /g postgres:f"/>
+	</exec>
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 autocommit="true"
+		 classpathref="jdbc.classpath">
+		CREATE TABLESPACE ${db.tablespace} LOCATION '${db.tablespace.dir}'
+	</sql>
+</target>
+
+<!-- CREATE SCHEMA -->
+<target name="create-schema">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+		CREATE SCHEMA ${eclipseLink.default_schema} AUTHORIZATION ${eclipseLink.connection.username};
+	</sql>
+</target>
+
+
+<!-- GRANT -->
+<target name="grant-create">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+		GRANT CREATE ON SCHEMA ${eclipseLink.default_schema}
+			         TO ${eclipseLink.connection.username};
+		GRANT CREATE ON TABLESPACE ${db.tablespace}
+		         TO ${eclipseLink.connection.username};
+	</sql>
+</target>
+
+
+
+<!-- REVOKE -->
+<target name="revoke-create">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+		REVOKE CREATE ON SCHEMA ${eclipseLink.default_schema}
+			          FROM ${eclipseLink.connection.username};
+		REVOKE CREATE ON TABLESPACE ${db.tablespace}
+			          FROM ${eclipseLink.connection.username};
+	</sql>
+</target>
+
+
+<!-- CREATE TABLES -->
+<target name="create-tables">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${eclipseLink.connection.username}"
+		 password="${eclipseLink.connection.password}"
+		 classpathref="jdbc.classpath" >
+		<transaction src="${basedir}/create-tables.sql"/>
+	</sql>
+</target>
+
+
+
+<!-- INSERT TEST DATA    -->
+<target name="load-data">
+	<!-- PostgreSQL arbeitet nur mit "/" beim Laden von CSV-Dateien -->
+	<pathconvert targetos="unix" property="basedir.slash">
+		<path>
+			<pathelement location="${basedir}" />
+		</path>
+	</pathconvert>
+	<copy file="load-tables.template.sql" tofile="load-tables.sql">
+		<filterset>
+			<filter token="BASEDIR" value="${basedir.slash}"/>
+		</filterset>
+	</copy>
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+		<transaction src="${basedir}/load-tables.sql"/>
+	</sql>
+	<delete file="${basedir}/load-tables.sql"/>
+</target>
+
+
+
+<!-- ALTER TABLES -->
+<target name="alter-seq">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${eclipseLink.connection.username}"
+		 password="${eclipseLink.connection.password}"
+		 classpathref="jdbc.classpath" >
+		<transaction src="${basedir}/alter-table.sql"/>
+	</sql>
+</target>
+
+
+<!-- DEFAULT TAGRET  -->
+<target name="load" description="Schema und Tabellen erzeugen, Testdaten einfuegen, Seq anpassen"
+		depends="create-db, create-tablespace, create-user, create-schema, grant-create, create-tables, load-data, alter-seq, revoke-create"/>
+
+
+
+<!-- DROP SCHEMA     -->
+<target name="clean">
+	<sql driver="${eclipseLink.connection.driver_class}"
+		 url="${eclipseLink.connection.url}"
+		 userid="${db.admin}"
+		 password="${db.admin.password}"
+		 classpathref="jdbc.classpath" >
+		DROP SCHEMA ${eclipseLink.default_schema} CASCADE;
+	</sql>
+</target>
+
+		
+<!-- RELOAD SCHEMA  -->
+<target name="reload" description="Schema loeschen und alles bis auf DB und Tablespace neu erzeugen"
+		depends="clean, create-schema, grant-create, create-tables, load-data, alter-seq, revoke-create"/>
+
+
+</project>

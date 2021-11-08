@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+       <File name="MyFileLogger" fileName="logs/${date:yyyy-MM-dd-HH-mm-ss-SSS}-${sys:user.name}.log" immediateFlush="false" append="false">
+        <PatternLayout pattern="%d %t %-5p %c{2} - %m%n"/>
+       </File>
+       <Console name="STDOUT" target="SYSTEM_OUT">
+        <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+       </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="edu.kit.exp.impl" level="info"/>
+        <Root level="trace">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="MyFileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
