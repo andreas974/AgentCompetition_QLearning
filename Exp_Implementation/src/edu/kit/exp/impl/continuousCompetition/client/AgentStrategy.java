@@ -6,8 +6,12 @@ import java.io.BufferedReader;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.*;
+import java.util.Scanner;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 import java.io.*;
 
 /**
@@ -89,49 +93,44 @@ public class AgentStrategy {
         System.out.println("Rolle" + myRole);
 
 
+        /* Test for Triopoly:
 
-        if (marketUpdate.isTriopolyTreatment()==true){
-            if (myRole==0) {
-                newAction = selectAction((int) ((marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2));
-                updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), getActionsOfOtherFirms(marketUpdate));
-                runEpisode(getActionsOfOtherFirms(marketUpdate));
-            }
-            else if (myRole==1){
-                newAction = selectAction((int) ((marketUpdate.getaFirmA()+marketUpdate.getaFirmC())/2));
-                updateMatrix(myLastAction, marketUpdate.getProfitFirmB(), getActionsOfOtherFirms(marketUpdate));
-                runEpisode(getActionsOfOtherFirms(marketUpdate));
-            }
-            else if (myRole==2){
-                newAction = selectAction((int) ((marketUpdate.getaFirmA()+marketUpdate.getaFirmB())/2));
-                updateMatrix(myLastAction, marketUpdate.getProfitFirmC(), getActionsOfOtherFirms(marketUpdate));
-                runEpisode(getActionsOfOtherFirms(marketUpdate));
-            }
+        if (myRole==0) {
+            newAction = selectAction((int) ((marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2));
+            updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), marketUpdate);
+            runEpisode(marketUpdate);
         }
-        else {
+        else if (myRole==1){
+            newAction = selectAction((int) ((marketUpdate.getaFirmA()+marketUpdate.getaFirmC())/2));
+            updateMatrix(myLastAction, marketUpdate.getProfitFirmB(), marketUpdate);
+            runEpisode(marketUpdate);
+        }
+        else if (myRole==2){
+            newAction = selectAction((int) ((marketUpdate.getaFirmA()+marketUpdate.getaFirmB())/2));
+            updateMatrix(myLastAction, marketUpdate.getProfitFirmC(), marketUpdate);
+            runEpisode(marketUpdate);
+        }*/
 
 
-            // Set new action according to the Q-Matrix and update Q-Matrix
-            if (myRole == 0) {
-                runEpisode(getActionsOfOtherFirms(marketUpdate));
-                updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), getActionsOfOtherFirms(marketUpdate));
-                newAction = selectAction((int) marketUpdate.getaFirmB());
-            } else if (myRole == 1) {
-                runEpisode(getActionsOfOtherFirms(marketUpdate));
-                updateMatrix(myLastAction, marketUpdate.getProfitFirmB(), getActionsOfOtherFirms(marketUpdate));
-                newAction = selectAction(marketUpdate.getaFirmA());
-            }
+        // Set new action according to the Q-Matrix and update Q-Matrix
+        if (myRole==0) {
+            newAction = selectAction((int) marketUpdate.getaFirmB());
+            updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), marketUpdate);
+            runEpisode(marketUpdate);
+        }
+        else if (myRole==1){
+            newAction = selectAction(marketUpdate.getaFirmA());
+            updateMatrix(myLastAction, marketUpdate.getProfitFirmB(), marketUpdate);
+            runEpisode(marketUpdate);
         }
 
-        /**
-         * Just to check: Print Matrix
-         */
-        /*
+        /**Just to check: Print Matrix
+
         for (int i = 0; i < q.length; i++) {
             for (int j = 0; j < q.length; j++) {
                 System.out.println(i+". Zeile und " + j + ".Spalte, Wert:"+ (q[i][j]) + " ");
             }
-        }
-        */
+        }*/
 
 
 
@@ -164,27 +163,17 @@ public class AgentStrategy {
      * Calculates the state of this Q-Learning algorithm object by weighting the minimum and maximum
      * of all other firms' actions (prices/quantities) with the parameter gamma.
      *
-     * @param actionsOfOtherFirms all other firms' actions.
+     * @param marketUpdate all other firms' actions.
      * @return state of this Q-Learning algorithm object as a weighted number.
      */
-
-    private int getState(Integer[] actionsOfOtherFirms) {
-        List<Integer> list = Arrays.asList(actionsOfOtherFirms);
-        Collections.sort(list);
-
-        // Get minimum and maximum of actions.
-        int minAction = list.get(0);
-        int maxAction = list.get(list.size() - 1);
-
-        int result;
-        if (minAction == maxAction) {
-            // If minimum equals maximum, then return simply the mean.
-            result = Math.round((float) ((minAction + maxAction) / 2));
-        } else {
-            // Else weight the minimum with gamma and the maximum with 1 - gamma.
-            result = (int) Math.round(parameter.gamma * minAction + (1 - parameter.gamma) * maxAction);
+    private int getState(ContinuousCompetitionParamObject marketUpdate) {
+        int result = 0;
+        if(myRole==0){
+            result = (int) marketUpdate.getaFirmB();
         }
-
+        else if(myRole==1){
+            result = (int) marketUpdate.getaFirmA();
+        }
         return result;
     }
 
@@ -203,7 +192,7 @@ public class AgentStrategy {
         index = getMaxActionIndex(state);
 
 
-        //No Explore strategy -> Agent should always exploit (According to Calvano et al., 2020)
+        //No Explore strategy -> Agent should always exploit (Calvano et al., 2020)
         /*if (rnd.nextDouble() > parameter.epsilon) {
             // Exploit
             index = getMaxActionIndex(state);
@@ -244,13 +233,13 @@ public class AgentStrategy {
      * of the corresponding firm and by determining the new state based on the latest actions (prices/quantities)
      * of all other firms.
      *
-     * @param actionsOfOtherFirms latest prices/quantities of all other other firms to determine the new state.
+     * @param marketUpdate latest prices/quantities of all other other firms to determine the new state.
      * @param action previous price/quantity chosen by the corresponding firm.
      * @param reward previous profit generated by the corresponding firm after choosing the action (price/quantity).
      */
-    void updateMatrix(int action, Double reward, Integer[] actionsOfOtherFirms) {
+    void updateMatrix(int action, Double reward, ContinuousCompetitionParamObject marketUpdate) {
         // Get the new state based on all other firms' actions.
-        int newState = getState(actionsOfOtherFirms);
+        int newState = getState(marketUpdate);
 
         // Observe maxQ for the new state.
         double nextMaxQ = q[newState][getMaxActionIndex(newState)];
@@ -266,12 +255,12 @@ public class AgentStrategy {
      * (either by exploration or exploitation). Finally, the counter for the number of episodes is increased,
      * beta (necessary for the action-selection policy) is decreased, and the chosen action is returned.
      *
-     * @param actionsOfOtherFirms prices/quantities of all other other firms to determine the state.
+     * @param marketUpdate prices/quantities of all other other firms to determine the state.
      * @return result (= price/quantity) of this Q-Learning episode.
      */
-    int runEpisode(Integer[] actionsOfOtherFirms) {
+    int runEpisode(ContinuousCompetitionParamObject marketUpdate) {
 
-        state = getState(actionsOfOtherFirms);
+        state = (int) marketUpdate.getaMarket();
 
         // Choose A from S using policy.
         int action = selectAction(state);
@@ -324,55 +313,17 @@ public class AgentStrategy {
     }
 
     /**
-     * @return array of all other firms' actions from the point of view of this particular firm
-     */
-    private Integer[] getActionsOfOtherFirms(ContinuousCompetitionParamObject marketUpdate) {
-        if (marketUpdate.isTriopolyTreatment()==true){
-            Integer[] actionsOfOtherFirms = new Integer[2];
-            if (myRole==0){
-                actionsOfOtherFirms[0] = marketUpdate.getaFirmB();
-                actionsOfOtherFirms[1] = marketUpdate.getaFirmC();
-            }
-            else if (myRole==1){
-                actionsOfOtherFirms[0] = marketUpdate.getaFirmA();
-                actionsOfOtherFirms[1] = marketUpdate.getaFirmC();
-            }
-            else if (myRole==2){
-                actionsOfOtherFirms[0] = marketUpdate.getaFirmA();
-                actionsOfOtherFirms[1] = marketUpdate.getaFirmB();
-            }
-
-            return actionsOfOtherFirms;
-
-        }
-        else {
-            Integer[] actionsOfOtherFirms = new Integer[1];
-            if (myRole == 0) {
-                actionsOfOtherFirms[0] = marketUpdate.getaFirmB();
-            }
-            else {
-                actionsOfOtherFirms[0] = marketUpdate.getaFirmB();
-            }
-
-            return actionsOfOtherFirms;
-
-        }
-    }
-
-
-
-    /**
      * Read the csv file from Sebastian's Q-Learning Agent and store all the values in an array called QMatrix
      *
      * @return QMatrix is an Array of all the QMatrix values
      */
     public double[] readcsv(){
 
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("edu/kit/exp/common/resources/TestMatrix.csv");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("edu/kit/exp/common/resources/SEQ_P_2_Export.csv");
 
         BufferedReader reader = null;
         String line = "";
-        double[] QMatrix_temp = new double[20404];
+        double[] QMatrix_temp = new double[20402];
         double[] QMatrix = new double[10201];
 
         try {
@@ -395,27 +346,18 @@ public class AgentStrategy {
                 e.printStackTrace();
             }
         }
-        for (int i = 10203,  j = 0; i <= 20403 && j < 10201; i++, j++ ){
+        for (int i = 0,  j = 0; i < 10201 && j < 10201; i++, j++ ){
                 QMatrix[j] = QMatrix_temp[i];
         }
         return QMatrix;
     }
 
-    /**
-     * Just a method to check the matrix values
-     * @param matrix is the current Q-Matrix
-     */
     public void printMatrix(double[] matrix){
         for (int i = 0; i < matrix.length; i++){
             System.out.println(matrix[i]);
         }
     }
 
-
-    /**
-     * Fill Q-Matrix with values from the simulation
-     * @param qliste is the list of values from the csv file
-     */
     public void initQMatrix(double[] qliste) {
         for (int i = 0; i < q.length; i++) {
             for (int j = 0; j < q.length; j++) {
@@ -431,6 +373,14 @@ public class AgentStrategy {
             }
         }
 
+    }
+
+    void fillq(){
+        for (int i = 0; i < 100; i++) {
+            for (int j = 0; j < 100; j++) {
+                q[i][j]=0;
+            }
+        }
     }
 
 }
