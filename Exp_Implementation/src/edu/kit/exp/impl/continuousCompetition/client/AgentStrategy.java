@@ -88,9 +88,14 @@ public class AgentStrategy {
         int newAction = myLastAction;
         // You may want to set a new action based on the received information, e.g. the average market price
         // newAction = (int) averageMarketAction;
+
+        //Check Role for Agent:
         System.out.println("Rolle" + myRole);
 
-        /*if (myRole==0) {
+
+        /* Test for Triopoly:
+
+        if (myRole==0) {
             newAction = selectAction((int) ((marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2));
             updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), marketUpdate);
             runEpisode(marketUpdate);
@@ -106,6 +111,8 @@ public class AgentStrategy {
             runEpisode(marketUpdate);
         }*/
 
+
+        // Set new action according to the Q-Matrix and update Q-Matrix
         if (myRole==0) {
             newAction = selectAction((int) marketUpdate.getaFirmB());
             updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), marketUpdate);
@@ -117,8 +124,8 @@ public class AgentStrategy {
             runEpisode(marketUpdate);
         }
 
-        /*System.out.println(marketUpdate.getaMarket());
-        //Überprüfung: Matrix wird ausgeben
+        /**Just to check: Print Matrix
+
         for (int i = 0; i < q.length; i++) {
             for (int j = 0; j < q.length; j++) {
                 System.out.println(i+". Zeile und " + j + ".Spalte, Wert:"+ (q[i][j]) + " ");
@@ -160,8 +167,13 @@ public class AgentStrategy {
      * @return state of this Q-Learning algorithm object as a weighted number.
      */
     private int getState(ContinuousCompetitionParamObject marketUpdate) {
-        int result;
-        result = (int) marketUpdate.getaMarket();
+        int result = 0;
+        if(myRole==0){
+            result = (int) marketUpdate.getaFirmB();
+        }
+        else if(myRole==1){
+            result = (int) marketUpdate.getaFirmA();
+        }
         return result;
     }
 
@@ -247,6 +259,7 @@ public class AgentStrategy {
      * @return result (= price/quantity) of this Q-Learning episode.
      */
     int runEpisode(ContinuousCompetitionParamObject marketUpdate) {
+
         state = (int) marketUpdate.getaMarket();
 
         // Choose A from S using policy.
@@ -259,8 +272,8 @@ public class AgentStrategy {
     }
 
     public static class Parameter {
-        private double alpha = 0.025;                   // Learning factor
-        private double delta = 0.96;                   // Discount factor
+        private double alpha;                   // Learning factor
+        private double delta;                   // Discount factor
 
         private double gamma = 1.0;                   // Weighting factor
 
@@ -306,11 +319,11 @@ public class AgentStrategy {
      */
     public double[] readcsv(){
 
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("edu/kit/exp/common/resources/TestMatrix.csv");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("edu/kit/exp/common/resources/SEQ_P_2_Export.csv");
 
         BufferedReader reader = null;
         String line = "";
-        double[] QMatrix_temp = new double[20404];
+        double[] QMatrix_temp = new double[20402];
         double[] QMatrix = new double[10201];
 
         try {
@@ -333,7 +346,7 @@ public class AgentStrategy {
                 e.printStackTrace();
             }
         }
-        for (int i = 10203,  j = 0; i <= 20403 && j < 10201; i++, j++ ){
+        for (int i = 0,  j = 0; i < 10201 && j < 10201; i++, j++ ){
                 QMatrix[j] = QMatrix_temp[i];
         }
         return QMatrix;
