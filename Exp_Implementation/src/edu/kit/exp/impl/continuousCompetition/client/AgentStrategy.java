@@ -34,7 +34,7 @@ public class AgentStrategy {
         log4j.info("AgentStrategy(): {}", agentCore);
         this.agentCore = agentCore;
         log4j.info("this.AgentInterface = {}", this.agentCore);
-        parameter = new AgentStrategy.Parameter(0.055, 0.95, 1);
+        parameter = new AgentStrategy.Parameter(0.025, 0.96, 1);
     }
 
 
@@ -93,36 +93,52 @@ public class AgentStrategy {
         System.out.println("Rolle" + myRole);
 
 
-        /* Test for Triopoly:
 
-        if (myRole==0) {
-            newAction = selectAction((int) ((marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2));
-            updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), marketUpdate);
-            runEpisode(marketUpdate);
+
+        if (agentCore.isTriopolyTreatment == false) {
+            // Set new action according to the Q-Matrix and update Q-Matrix
+            if (myRole == 0) {
+                //newAction = selectAction((int) marketUpdate.getaFirmB());
+                updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
+                newAction=runEpisode(marketUpdate);
+            } else if (myRole == 1) {
+                //newAction = selectAction(marketUpdate.getaFirmA());
+                updateMatrix(myLastAction, (marketUpdate.getaFirmB()*marketUpdate.getoFirmB()), marketUpdate);
+                newAction=runEpisode(marketUpdate);
+            }
+
+
+        }
+        else if(agentCore.isTriopolyTreatment==true){
+            if (myRole == 0) {
+                //newAction = selectAction((marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2);
+                updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
+                newAction=runEpisode(marketUpdate);
+            } else if (myRole == 1) {
+                //newAction = selectAction((marketUpdate.getaFirmA()+marketUpdate.getaFirmC())/2);
+                updateMatrix(myLastAction, (marketUpdate.getaFirmB()*marketUpdate.getoFirmB()), marketUpdate);
+                newAction=runEpisode(marketUpdate);
+            }
+            else if (myRole == 2) {
+                //newAction = selectAction((marketUpdate.getaFirmB() + marketUpdate.getaFirmC()) / 2);
+                updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
+                newAction=runEpisode(marketUpdate);
+            }
+        }
+
+        if (myRole==0){
+            System.out.println("Preis der aktuellen Periode: " + marketUpdate.getaFirmA());
+            System.out.println("Menge der aktuellen Periode: " + marketUpdate.getoFirmA());
+            System.out.println("Profit der aktuellen Periode: " + marketUpdate.getProfitFirmA());
         }
         else if (myRole==1){
-            newAction = selectAction((int) ((marketUpdate.getaFirmA()+marketUpdate.getaFirmC())/2));
-            updateMatrix(myLastAction, marketUpdate.getProfitFirmB(), marketUpdate);
-            runEpisode(marketUpdate);
+            System.out.println("Preis der aktuellen Periode: " + marketUpdate.getaFirmB());
+            System.out.println("Menge der aktuellen Periode: " + marketUpdate.getoFirmB());
+            System.out.println("Profit der aktuellen Periode: " + marketUpdate.getProfitFirmB());
         }
-        else if (myRole==2){
-            newAction = selectAction((int) ((marketUpdate.getaFirmA()+marketUpdate.getaFirmB())/2));
-            updateMatrix(myLastAction, marketUpdate.getProfitFirmC(), marketUpdate);
-            runEpisode(marketUpdate);
-        }*/
 
+        printq();
 
-        // Set new action according to the Q-Matrix and update Q-Matrix
-        if (myRole==0) {
-            newAction = selectAction((int) marketUpdate.getaFirmB());
-            updateMatrix(myLastAction, marketUpdate.getProfitFirmA(), marketUpdate);
-            runEpisode(marketUpdate);
-        }
-        else if (myRole==1){
-            newAction = selectAction(marketUpdate.getaFirmA());
-            updateMatrix(myLastAction, marketUpdate.getProfitFirmB(), marketUpdate);
-            runEpisode(marketUpdate);
-        }
 
         /**Just to check: Print Matrix
 
@@ -168,11 +184,24 @@ public class AgentStrategy {
      */
     private int getState(ContinuousCompetitionParamObject marketUpdate) {
         int result = 0;
-        if(myRole==0){
-            result = (int) marketUpdate.getaFirmB();
+        if (agentCore.isTriopolyTreatment==false) {
+            if (myRole == 0) {
+                result = (int) marketUpdate.getaFirmB();
+            }
+            else if (myRole == 1) {
+                result = (int) marketUpdate.getaFirmA();
+            }
         }
-        else if(myRole==1){
-            result = (int) marketUpdate.getaFirmA();
+        else if (agentCore.isTriopolyTreatment==true){
+            if (myRole == 0) {
+                result = (marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2;
+            }
+            else if (myRole == 1) {
+                result = (marketUpdate.getaFirmA()+marketUpdate.getaFirmC())/2;
+            }
+            else if (myRole == 2) {
+                result = (marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2;
+            }
         }
         return result;
     }
@@ -260,7 +289,7 @@ public class AgentStrategy {
      */
     int runEpisode(ContinuousCompetitionParamObject marketUpdate) {
 
-        state = (int) marketUpdate.getaMarket();
+        state = getState(marketUpdate);
 
         // Choose A from S using policy.
         int action = selectAction(state);
@@ -319,15 +348,33 @@ public class AgentStrategy {
      */
     public double[] readcsv(){
 
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("edu/kit/exp/common/resources/SEQ_P_2_Export.csv");
+        String path = "";
+
+        if (agentCore.isTriopolyTreatment == true) {
+            if (agentCore.isCournotTreatment==true) {
+                path = "edu/kit/exp/common/resources/SIM_Q_3_Export.csv";
+            }
+            else if (agentCore.isCournotTreatment==false){
+                path = "edu/kit/exp/common/resources/SIM_P_3_Export.csv";
+            }
+        }
+        else if (agentCore.isTriopolyTreatment == false) {
+            if (agentCore.isCournotTreatment==true) {
+                path = "edu/kit/exp/common/resources/SIM_Q_2_Export.csv";
+            }
+            else if (agentCore.isCournotTreatment==false){
+                path = "edu/kit/exp/common/resources/SEQ_P_2_Export.csv";
+            }
+        }
 
         BufferedReader reader = null;
         String line = "";
-        double[] QMatrix_temp = new double[20402];
+        double[] QMatrix_temp = new double[30603];
         double[] QMatrix = new double[10201];
 
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(path);
         try {
-            reader = new BufferedReader(new InputStreamReader(inputStream ));
+            reader = new BufferedReader(new InputStreamReader(inputStream));
             int i = 0;
             while((line = reader.readLine()) != null) {
                 String[] row = line.split(":");
@@ -346,6 +393,7 @@ public class AgentStrategy {
                 e.printStackTrace();
             }
         }
+
         for (int i = 0,  j = 0; i < 10201 && j < 10201; i++, j++ ){
                 QMatrix[j] = QMatrix_temp[i];
         }
@@ -369,9 +417,10 @@ public class AgentStrategy {
     public void printq(){
         for (int i = 0; i < 101; i++) {
             for (int j = 0; j < 101; j++) {
-                System.out.println(q[i][j]);
+                System.out.println(i + ". Zeile und " + j + ". Spalte mit Wert: " + q[i][j]);
             }
         }
+        System.out.println("Neue Matrix:");
 
     }
 
