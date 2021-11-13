@@ -30,11 +30,27 @@ public class AgentStrategy {
     private final Random rnd = new Random(42);
     private int numberOfEpisodes;       // Number of episodes that have been conducted.
 
+
     public AgentStrategy(AgentCore agentCore) {
         log4j.info("AgentStrategy(): {}", agentCore);
         this.agentCore = agentCore;
         log4j.info("this.AgentInterface = {}", this.agentCore);
-        parameter = new AgentStrategy.Parameter(0.025, 0.96, 1);
+        if (agentCore.isTriopolyTreatment==false) {
+            if (agentCore.isCournotTreatment==false){
+                parameter = new AgentStrategy.Parameter(0.055, 0.95);
+            }
+            else if (agentCore.isCournotTreatment==true){
+                parameter = new AgentStrategy.Parameter(0.055, 0.95);
+            }
+        }
+        else if (agentCore.isTriopolyTreatment==true){
+            if (agentCore.isCournotTreatment==false){
+                parameter = new AgentStrategy.Parameter(0.055, 0.99, 1);
+            }
+            else if (agentCore.isTriopolyTreatment){
+                parameter = new AgentStrategy.Parameter(0.040, 0.98, 0);
+            }
+        }
     }
 
 
@@ -50,8 +66,8 @@ public class AgentStrategy {
         int initAction = 25;
         readcsv();
         initQMatrix(readcsv());
-        printMatrix(readcsv());
-        //printq();
+        //printMatrix(readcsv());
+        printq();
 
         // Initial action is sent to server
         agentCore.updateAction(initAction);
@@ -90,7 +106,7 @@ public class AgentStrategy {
         // newAction = (int) averageMarketAction;
 
         //Check Role for Agent:
-        System.out.println("Rolle" + myRole);
+        System.out.println("Rolle des Agenten:" + myRole);
 
 
 
@@ -98,11 +114,9 @@ public class AgentStrategy {
         if (agentCore.isTriopolyTreatment == false) {
             // Set new action according to the Q-Matrix and update Q-Matrix
             if (myRole == 0) {
-                //newAction = selectAction((int) marketUpdate.getaFirmB());
                 updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
                 newAction=runEpisode(marketUpdate);
             } else if (myRole == 1) {
-                //newAction = selectAction(marketUpdate.getaFirmA());
                 updateMatrix(myLastAction, (marketUpdate.getaFirmB()*marketUpdate.getoFirmB()), marketUpdate);
                 newAction=runEpisode(marketUpdate);
             }
@@ -126,28 +140,8 @@ public class AgentStrategy {
             }
         }
 
-        if (myRole==0){
-            System.out.println("Preis der aktuellen Periode: " + marketUpdate.getaFirmA());
-            System.out.println("Menge der aktuellen Periode: " + marketUpdate.getoFirmA());
-            System.out.println("Profit der aktuellen Periode: " + marketUpdate.getProfitFirmA());
-        }
-        else if (myRole==1){
-            System.out.println("Preis der aktuellen Periode: " + marketUpdate.getaFirmB());
-            System.out.println("Menge der aktuellen Periode: " + marketUpdate.getoFirmB());
-            System.out.println("Profit der aktuellen Periode: " + marketUpdate.getProfitFirmB());
-        }
-
+        //Just to check Q-Matrix Updates
         printq();
-
-
-        /**Just to check: Print Matrix
-
-        for (int i = 0; i < q.length; i++) {
-            for (int j = 0; j < q.length; j++) {
-                System.out.println(i+". Zeile und " + j + ".Spalte, Wert:"+ (q[i][j]) + " ");
-            }
-        }*/
-
 
 
         // newAction = (int) marketUpdate.getaFirmA();
@@ -163,7 +157,7 @@ public class AgentStrategy {
         log4j.info("Updated action to {}", newAction);
     }
 
-    int setNewRandomAction() {
+    /*int setNewRandomAction() {
 
         // Todo: implement action update based on internal processing (e.g. learning algorithm)
         // Simple example: set a random action between 0 and 100:
@@ -172,15 +166,14 @@ public class AgentStrategy {
 
         log4j.info("Created new random action {}", randomAction);
         return randomAction;
-    }
+    }*/
 
 
     /**
-     * Calculates the state of this Q-Learning algorithm object by weighting the minimum and maximum
-     * of all other firms' actions (prices/quantities) with the parameter gamma.
+     * Calculates the state of this Q-Learning algorithm object
      *
      * @param marketUpdate all other firms' actions.
-     * @return state of this Q-Learning algorithm object as a weighted number.
+     * @return state of this Q-Learning algorithm.
      */
     private int getState(ContinuousCompetitionParamObject marketUpdate) {
         int result = 0;
@@ -213,7 +206,7 @@ public class AgentStrategy {
      * (explore).
      *
      * @param state current state of the firm deploying this Q-Learning algorithm.
-     * @return action determined by the epsilon-greedy policy.
+     * @return index determined by the epsilon-greedy policy.
      */
     private int selectAction(int state){
         int index;
@@ -301,13 +294,14 @@ public class AgentStrategy {
     }
 
     public static class Parameter {
+        private int maxNumberOfPeriods = 1800000;
         private double alpha;                   // Learning factor
         private double delta;                   // Discount factor
 
         private double gamma = 1.0;                   // Weighting factor
 
         private double epsilon = 1;             // Probability of exploration
-        private double beta = 1 - Math.pow(0.000001, epsilon / 51005000); // Factor for decreasing epsilon
+        private double beta = 1 - Math.pow(0.000001, epsilon / maxNumberOfPeriods); // Factor for decreasing epsilon
 
         public Parameter(double alpha, double delta, double gamma) {
             this.alpha = alpha;
@@ -400,11 +394,15 @@ public class AgentStrategy {
         return QMatrix;
     }
 
+
+    /*
+    //Method just to check whether Matrix Input was correct
+
     public void printMatrix(double[] matrix){
         for (int i = 0; i < matrix.length; i++){
             System.out.println(matrix[i]);
-        }
-    }
+       }
+    }*/
 
     public void initQMatrix(double[] qliste) {
         for (int i = 0; i < q.length; i++) {
@@ -417,21 +415,12 @@ public class AgentStrategy {
     public void printq(){
         for (int i = 0; i < 101; i++) {
             for (int j = 0; j < 101; j++) {
-                System.out.println(i + ". Zeile und " + j + ". Spalte mit Wert: " + q[i][j]);
+                System.out.println(i + ". Zeile und " + j + ".Spalte, Wert:" + q[i][j]);
             }
         }
         System.out.println("Neue Matrix:");
 
     }
-
-    void fillq(){
-        for (int i = 0; i < 100; i++) {
-            for (int j = 0; j < 100; j++) {
-                q[i][j]=0;
-            }
-        }
-    }
-
 }
 
 
