@@ -36,7 +36,8 @@ public class DefaultWelcomeScreen extends Screen {
 	public DefaultWelcomeScreen(String gameId, ParamObject parameter, String screenId, Long showUpTime) {
 		super(gameId, parameter, screenId, showUpTime);
 
-		this.welcomeMessage = "<html><body><h1>Welcome to the experiment!</h1><br> Please wait... </html></body>";
+		//this.welcomeMessage = "<html><body><h1>Welcome to the experiment!</h1><br> Please wait... </html></body>";
+		this.welcomeMessage = "<html><body><h1>Willkommen zum Experiment!</h1><br> Bitte warten... </html></body>";
 		setLayout(new BorderLayout(0, 0));
 		this.labelWelcomeMessage = new JLabel(welcomeMessage);
 		labelWelcomeMessage.setFont(new Font("Tahoma", Font.BOLD, 17));

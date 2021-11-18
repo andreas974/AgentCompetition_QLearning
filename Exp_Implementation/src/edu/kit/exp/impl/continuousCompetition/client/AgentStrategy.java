@@ -287,7 +287,7 @@ public class AgentStrategy {
         // Choose A from S using policy.
         int action = selectAction(state);
         numberOfEpisodes++;
-        // Decrease epsilon: not necessary according to Calvano et al. 2020
+        // Decrease epsilon
         parameter.decreaseEpsilon(numberOfEpisodes);
 
         return action;
@@ -344,20 +344,20 @@ public class AgentStrategy {
 
         String path = "";
 
-        if (agentCore.isTriopolyTreatment == true) {
-            if (agentCore.isCournotTreatment==true) {
+        if (agentCore.isTriopolyTreatment) {
+            if (agentCore.isCournotTreatment) {
                 path = "edu/kit/exp/common/resources/SIM_Q_3_Export.csv";
             }
-            else if (agentCore.isCournotTreatment==false){
+            else if (!agentCore.isCournotTreatment){
                 path = "edu/kit/exp/common/resources/SIM_P_3_Export.csv";
             }
         }
-        else if (agentCore.isTriopolyTreatment == false) {
-            if (agentCore.isCournotTreatment==true) {
+        else if (!agentCore.isTriopolyTreatment) {
+            if (agentCore.isCournotTreatment) {
                 path = "edu/kit/exp/common/resources/SIM_Q_2_Export.csv";
             }
-            else if (agentCore.isCournotTreatment==false){
-                path = "edu/kit/exp/common/resources/SEQ_P_2_Export.csv";
+            else if (!agentCore.isCournotTreatment){
+                path = "edu/kit/exp/common/resources/SIM_P_2_Export.csv";
             }
         }
 
