@@ -16,7 +16,7 @@ public class ContinuousCompetitionParamObject extends ParamObject {
     private boolean practiceRound = false;
     private boolean initialUpdate = false;
     private boolean isDiscreteTreatment = false;
-    private boolean isTriopolyTreatment = true;
+    private boolean isTriopolyTreatment = false;
     private boolean isCournotTreatment;
     private boolean isQuadropolyTreatment;
     private int duration;

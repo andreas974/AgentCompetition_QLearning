@@ -61,7 +61,7 @@ public class DefaultWelcomeScreen extends Screen {
 
 		JLabel lblLogo = new JLabel("");
 		lblLogo.setIcon(new ImageIcon(Objects.requireNonNull(getClass().getResource("/edu/kit/exp/common/resources/kit_logo.png"))));
-		panel.add(lblLogo, BorderLayout.WEST);
+		panel.add(lblLogo, BorderLayout.EAST);
 	}
 
 }

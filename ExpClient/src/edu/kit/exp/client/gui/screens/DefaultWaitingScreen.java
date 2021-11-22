@@ -51,7 +51,7 @@ public class DefaultWaitingScreen extends Screen {
 
 		this.message = parameter.getMessage();
 		setLayout(new BorderLayout(0, 0));
-		this.labelWaitMessage = new JLabel("<html><body><h1>Please wait...</h1></body></html>");
+		this.labelWaitMessage = new JLabel("<html><body><h1>Bitte warten...</h1></body></html>");
 		labelWaitMessage.setFont(new Font("Tahoma", Font.BOLD, 17));
 
 		setBorder(new EmptyBorder(10, 10, 10, 10));
