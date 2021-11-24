@@ -1,0 +1,207 @@
+2021-11-23 12:05:18,144 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - AgentStrategy(): edu.kit.exp.impl.continuousCompetition.client.AgentCoreWithGui[,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-23 12:05:18,146 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - this.AgentInterface = edu.kit.exp.impl.continuousCompetition.client.AgentCoreWithGui[,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-23 12:05:18,147 CLIENT MessageDeliveryThread INFO  client.AgentCore - Started AgentInterface for client agent 2 in cohort 555 with discreteTreatment = false, practiceRound = true
+2021-11-23 12:05:18,148 CLIENT MessageDeliveryThread INFO  client.AgentCore - Initial price values: aFirmA: 0, aFirmB: 0.0, aFirmC: 0, aFirmD: 0
+2021-11-23 12:05:18,148 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Initialize information based on received initial market update.
+2021-11-23 12:05:18,692 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(25)
+2021-11-23 12:05:18,693 CLIENT MessageDeliveryThread INFO  client.AgentCore - call sendActionUpdate()
+2021-11-23 12:05:18,694 CLIENT MessageDeliveryThread INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 0 and time 0 in round 0 - pFirmA: 25.
+2021-11-23 12:05:18,705 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Set initial action to 25
+2021-11-23 12:05:18,718 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Initialized CartDisplayPanel: timestep:  500, tduration: 1800000, t_mid_window: 150000, t_hatch: 15000, t_startLastWindow: 1650000
+2021-11-23 12:05:36,566 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - AgentStrategy(): edu.kit.exp.impl.continuousCompetition.client.AgentCoreWithGui[,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-23 12:05:36,567 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - this.AgentInterface = edu.kit.exp.impl.continuousCompetition.client.AgentCoreWithGui[,0,0,0x0,invalid,layout=java.awt.FlowLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-23 12:05:36,567 CLIENT MessageDeliveryThread INFO  client.AgentCore - Started AgentInterface for client agent 2 in cohort 556 with discreteTreatment = false, practiceRound = false
+2021-11-23 12:05:36,567 CLIENT MessageDeliveryThread INFO  client.AgentCore - Initial price values: aFirmA: 25, aFirmB: 0.0, aFirmC: 0, aFirmD: 0
+2021-11-23 12:05:36,567 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Initialize information based on received initial market update.
+2021-11-23 12:05:36,718 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(25)
+2021-11-23 12:05:36,718 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Set initial action to 25
+2021-11-23 12:05:36,718 CLIENT MessageDeliveryThread INFO  client.AgentCore - Client agent 2 sending ready message to server.
+2021-11-23 12:05:36,723 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Initialized CartDisplayPanel: timestep:  500, tduration: 1800000, t_mid_window: 150000, t_hatch: 15000, t_startLastWindow: 1650000
+2021-11-23 12:05:36,755 CLIENT MessageDeliveryThread INFO  client.AgentCore - Recipient agent 2 (role: Firma A) in cohort 556 received start flag - starting timer.
+2021-11-23 12:05:36,756 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 0)
+2021-11-23 12:05:36,756 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 0
+2021-11-23 12:05:36,757 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 12.5
+2021-11-23 12:05:36,757 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 12
+2021-11-23 12:05:36,757 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 25
+2021-11-23 12:05:36,826 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:36,827 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:37,256 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 0 and time 0 in round 0 - pFirmA: 31.
+2021-11-23 12:05:37,259 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 0 to 500. Duration is set to: 1800000
+2021-11-23 12:05:37,277 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 0)
+2021-11-23 12:05:37,277 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 0
+2021-11-23 12:05:37,277 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:37,277 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:37,277 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:37,318 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:37,319 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:37,757 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 1 and time 500 in round 1 - pFirmA: 31.
+2021-11-23 12:05:37,758 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 500 to 1000. Duration is set to: 1800000
+2021-11-23 12:05:37,766 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 1)
+2021-11-23 12:05:37,766 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 1
+2021-11-23 12:05:37,766 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:37,766 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:37,766 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:37,802 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:37,803 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:38,257 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 2 and time 1000 in round 2 - pFirmA: 31.
+2021-11-23 12:05:38,260 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 1000 to 1500. Duration is set to: 1800000
+2021-11-23 12:05:38,271 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 2)
+2021-11-23 12:05:38,271 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 2
+2021-11-23 12:05:38,271 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:38,272 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:38,272 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:38,302 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:38,302 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:38,761 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 3 and time 1500 in round 3 - pFirmA: 31.
+2021-11-23 12:05:38,763 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 1500 to 2000. Duration is set to: 1800000
+2021-11-23 12:05:38,769 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 3)
+2021-11-23 12:05:38,769 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 3
+2021-11-23 12:05:38,769 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:38,769 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:38,770 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:38,804 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:38,804 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:39,262 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 4 and time 2000 in round 4 - pFirmA: 31.
+2021-11-23 12:05:39,263 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 2000 to 2500. Duration is set to: 1800000
+2021-11-23 12:05:39,269 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 4)
+2021-11-23 12:05:39,269 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 4
+2021-11-23 12:05:39,269 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:39,269 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:39,269 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:39,293 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:39,293 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:39,767 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 5 and time 2500 in round 5 - pFirmA: 31.
+2021-11-23 12:05:39,769 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 2500 to 3000. Duration is set to: 1800000
+2021-11-23 12:05:39,777 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 5)
+2021-11-23 12:05:39,777 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 5
+2021-11-23 12:05:39,777 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:39,777 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:39,777 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:39,802 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:39,803 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:40,270 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 6 and time 3000 in round 6 - pFirmA: 31.
+2021-11-23 12:05:40,272 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 3000 to 3500. Duration is set to: 1800000
+2021-11-23 12:05:40,282 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 6)
+2021-11-23 12:05:40,282 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 6
+2021-11-23 12:05:40,282 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:40,282 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:40,282 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:40,306 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:40,306 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:40,775 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 7 and time 3500 in round 7 - pFirmA: 31.
+2021-11-23 12:05:40,777 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 3500 to 4000. Duration is set to: 1800000
+2021-11-23 12:05:40,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 7)
+2021-11-23 12:05:40,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 7
+2021-11-23 12:05:40,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:40,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:40,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:40,822 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:40,823 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:41,278 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 8 and time 4000 in round 8 - pFirmA: 31.
+2021-11-23 12:05:41,280 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 4000 to 4500. Duration is set to: 1800000
+2021-11-23 12:05:41,286 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 8)
+2021-11-23 12:05:41,286 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 8
+2021-11-23 12:05:41,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:41,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:41,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:41,308 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:41,309 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:41,779 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 9 and time 4500 in round 9 - pFirmA: 31.
+2021-11-23 12:05:41,781 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 4500 to 5000. Duration is set to: 1800000
+2021-11-23 12:05:41,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 9)
+2021-11-23 12:05:41,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 9
+2021-11-23 12:05:41,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:41,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:41,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:41,810 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:41,811 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:42,279 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 10 and time 5000 in round 10 - pFirmA: 31.
+2021-11-23 12:05:42,280 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 5000 to 5500. Duration is set to: 1800000
+2021-11-23 12:05:42,285 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 10)
+2021-11-23 12:05:42,286 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 10
+2021-11-23 12:05:42,286 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:42,286 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:42,286 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:42,305 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:42,305 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:42,780 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 11 and time 5500 in round 11 - pFirmA: 31.
+2021-11-23 12:05:42,781 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 5500 to 6000. Duration is set to: 1800000
+2021-11-23 12:05:42,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 11)
+2021-11-23 12:05:42,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 11
+2021-11-23 12:05:42,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:42,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:42,788 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:42,809 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:42,810 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:43,280 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 12 and time 6000 in round 12 - pFirmA: 31.
+2021-11-23 12:05:43,281 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 6000 to 6500. Duration is set to: 1800000
+2021-11-23 12:05:43,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 12)
+2021-11-23 12:05:43,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 12
+2021-11-23 12:05:43,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:43,287 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:43,288 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:43,309 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:43,309 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:43,780 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 13 and time 6500 in round 13 - pFirmA: 31.
+2021-11-23 12:05:43,782 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 6500 to 7000. Duration is set to: 1800000
+2021-11-23 12:05:43,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 13)
+2021-11-23 12:05:43,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 13
+2021-11-23 12:05:43,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:43,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:43,787 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:43,806 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:43,807 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:44,284 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 14 and time 7000 in round 14 - pFirmA: 31.
+2021-11-23 12:05:44,285 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 7000 to 7500. Duration is set to: 1800000
+2021-11-23 12:05:44,291 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 14)
+2021-11-23 12:05:44,291 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 14
+2021-11-23 12:05:44,291 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:44,291 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:44,291 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:44,313 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:44,313 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:44,788 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 15 and time 7500 in round 15 - pFirmA: 31.
+2021-11-23 12:05:44,790 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 7500 to 8000. Duration is set to: 1800000
+2021-11-23 12:05:44,796 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 15)
+2021-11-23 12:05:44,796 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 15
+2021-11-23 12:05:44,796 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:44,796 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:44,796 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:44,819 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:44,819 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:45,289 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 16 and time 8000 in round 16 - pFirmA: 31.
+2021-11-23 12:05:45,291 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 8000 to 8500. Duration is set to: 1800000
+2021-11-23 12:05:45,299 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 16)
+2021-11-23 12:05:45,300 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 16
+2021-11-23 12:05:45,300 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:45,300 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:45,300 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:45,322 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:45,323 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:45,795 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 17 and time 8500 in round 17 - pFirmA: 31.
+2021-11-23 12:05:45,797 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 8500 to 9000. Duration is set to: 1800000
+2021-11-23 12:05:45,809 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 17)
+2021-11-23 12:05:45,810 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 17
+2021-11-23 12:05:45,810 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:45,810 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:45,810 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:45,838 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:45,838 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:46,299 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 18 and time 9000 in round 18 - pFirmA: 31.
+2021-11-23 12:05:46,300 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 9000 to 9500. Duration is set to: 1800000
+2021-11-23 12:05:46,304 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Received marketUpdate (id: 18)
+2021-11-23 12:05:46,305 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) countID: 18
+2021-11-23 12:05:46,305 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (double) pMarket: 15.5
+2021-11-23 12:05:46,305 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - (int) pMarket: 15
+2021-11-23 12:05:46,305 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Own action in last round: 31
+2021-11-23 12:05:46,326 CLIENT MessageDeliveryThread INFO  client.AgentCore - updateAction(31)
+2021-11-23 12:05:46,326 CLIENT MessageDeliveryThread INFO  client.AgentStrategy - Updated action to 31
+2021-11-23 12:05:46,804 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 19 and time 9500 in round 19 - pFirmA: 31.
+2021-11-23 12:05:46,805 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 9500 to 10000. Duration is set to: 1800000
+2021-11-23 12:05:47,307 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 20 and time 10000 in round 20 - pFirmA: 31.
+2021-11-23 12:05:47,308 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 10000 to 10500. Duration is set to: 1800000
+2021-11-23 12:05:47,810 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 21 and time 10500 in round 21 - pFirmA: 31.
+2021-11-23 12:05:47,811 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 10500 to 11000. Duration is set to: 1800000
+2021-11-23 12:05:48,313 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 22 and time 11000 in round 22 - pFirmA: 31.
+2021-11-23 12:05:48,316 AWT-EventQueue-0 INFO  client.AgentCore - Timer: Advanced local time from 11000 to 11500. Duration is set to: 1800000
+2021-11-23 12:05:48,843 AWT-EventQueue-0 INFO  client.AgentCore - Firm A: Sending actionUpdate with countId 23 and time 11500 in round 23 - pFirmA: 31.

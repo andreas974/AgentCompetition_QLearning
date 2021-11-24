@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact name="AgentCompetition:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AgentCompetition_jar</output-path>
+  <artifact name="AgentCompetition QLearning:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AgentCompetition_QLearning_jar</output-path>
     <root id="root">
       <element id="archive" name="AgentCompetition QLearning.jar">
         <element id="module-output" name="ExpClient" />
@@ -9,12 +9,13 @@
         <element id="module-output" name="ExpServer" />
         <element id="module-output" name="Exp_Implementation" />
       </element>
-      <element id="library" level="project" name="AgentCompetitionLS_jar" />
       <element id="library" level="project" name="eclipseLink" />
-      <element id="library" level="project" name="lib3" />
-      <element id="library" level="project" name="lib1" />
-      <element id="library" level="project" name="lib2" />
+      <element id="library" level="project" name="AgentCompetition QLearning" />
       <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="lib2" />
+      <element id="library" level="project" name="lib1" />
+      <element id="library" level="project" name="lib3" />
+      <element id="library" level="project" name="AgentCompetitionLS_jar" />
       <element id="file-copy" path="$PROJECT_DIR$/config/java.policy" />
       <element id="file-copy" path="$PROJECT_DIR$/config/start_agent.bat" />
       <element id="file-copy" path="$PROJECT_DIR$/config/start_client.bat" />
