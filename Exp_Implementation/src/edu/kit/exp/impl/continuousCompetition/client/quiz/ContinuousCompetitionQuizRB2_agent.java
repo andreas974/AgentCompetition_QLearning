@@ -50,7 +50,7 @@ public class ContinuousCompetitionQuizRB2_agent extends QuizScreen {
         question.addAnswer("Falsch");
         this.addQuizItem(question);
 
-        question = new QuizItemMultipleChoice("Die in den Vergangenheit gewählten Preise haben keine Auswirkung auf den Kontostand.");
+        question = new QuizItemMultipleChoice("Die in der Vergangenheit gewählten Preise haben keine Auswirkung auf den Kontostand.");
         question.addAnswer("Wahr");
         question.addAnswer("Falsch", true);
         this.addQuizItem(question);

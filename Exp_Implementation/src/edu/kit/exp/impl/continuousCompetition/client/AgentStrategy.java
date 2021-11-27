@@ -37,7 +37,7 @@ public class AgentStrategy {
         log4j.info("this.AgentInterface = {}", this.agentCore);
         if (agentCore.isTriopolyTreatment==false) {
             if (agentCore.isCournotTreatment==false){
-                parameter = new AgentStrategy.Parameter(0.055, 0.95);
+                parameter = new AgentStrategy.Parameter(0.025, 0.96);
             }
             else if (agentCore.isCournotTreatment==true){
                 parameter = new AgentStrategy.Parameter(0.055, 0.95);
@@ -47,11 +47,13 @@ public class AgentStrategy {
             if (agentCore.isCournotTreatment==false){
                 parameter = new AgentStrategy.Parameter(0.055, 0.99, 1);
             }
-            else if (agentCore.isTriopolyTreatment){
+            else if (agentCore.isCournotTreatment==true){
                 parameter = new AgentStrategy.Parameter(0.040, 0.98, 0);
             }
         }
     }
+
+
 
 
     void init(ContinuousCompetitionParamObject initialMarketUpdate) {
@@ -63,11 +65,19 @@ public class AgentStrategy {
 
         // Todo: set inital action for the start of the simulation
         // For example: set action 25 as the initial action
-        int initAction = 25;
+
+        int initAction = 0;
+        if (agentCore.isCournotTreatment==true) {
+            initAction = 30;
+        }
+        else {
+            initAction = 50;
+        }
         readcsv();
         initQMatrix(readcsv());
         //printMatrix(readcsv());
         printq();
+        System.out.println("Parameter gesetzt auf Alpha: " + parameter.alpha + " und Delta: " + parameter.delta);
 
         // Initial action is sent to server
         agentCore.updateAction(initAction);
@@ -187,6 +197,35 @@ public class AgentStrategy {
         }
         else if (agentCore.isTriopolyTreatment==true){
             if (myRole == 0) {
+                if (marketUpdate.getaFirmB()<marketUpdate.getaFirmC()){
+                    result = (marketUpdate.getaFirmB());
+                }
+                else {
+                    result = (marketUpdate.getaFirmC());
+                }
+            }
+            else if (myRole == 1) {
+                if (marketUpdate.getaFirmA()<marketUpdate.getaFirmC()){
+                    result = (marketUpdate.getaFirmA());
+                }
+                else {
+                    result = (marketUpdate.getaFirmC());
+                }
+            }
+            else if (myRole == 2) {
+                if (marketUpdate.getaFirmA()<marketUpdate.getaFirmB()){
+                    result = (marketUpdate.getaFirmA());
+                }
+                else {
+                    result = (marketUpdate.getaFirmB());
+                }
+            }
+        }
+
+
+        //This uses the average for the other firms
+        /*else if (agentCore.isTriopolyTreatment==true){
+            if (myRole == 0) {
                 result = (marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2;
             }
             else if (myRole == 1) {
@@ -195,7 +234,7 @@ public class AgentStrategy {
             else if (myRole == 2) {
                 result = (marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2;
             }
-        }
+        }*/
         return result;
     }
 
@@ -387,10 +426,22 @@ public class AgentStrategy {
                 e.printStackTrace();
             }
         }
-
-        for (int i = 0,  j = 0; i < 10201 && j < 10201; i++, j++ ){
+        if (myRole == 0) {
+            for (int i = 0, j = 0; i < 10201 && j < 10201; i++, j++) {
                 QMatrix[j] = QMatrix_temp[i];
+            }
         }
+        else if (myRole==1) {
+            for (int i = 10201, j = 0; i < 20402 && j < 10201; i++, j++) {
+                QMatrix[j] = QMatrix_temp[i];
+            }
+        }
+        else if (myRole==2) {
+            for (int i = 20402, j = 0; i < 30603 && j < 10201; i++, j++) {
+                QMatrix[j] = QMatrix_temp[i];
+            }
+        }
+
         return QMatrix;
     }
 

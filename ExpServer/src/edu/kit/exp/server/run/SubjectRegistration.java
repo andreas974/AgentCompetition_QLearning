@@ -41,7 +41,7 @@ public class SubjectRegistration {
 	private int numberOfSubjects;
 	private int numberOfRegisteredSubjects;
 	// UC modification delete: start
-	// private ArrayList<Integer> randomSubjectNumbers;
+	private ArrayList<Integer> randomSubjectNumbers;
 	// UC modification delete: end
 	private ArrayList<String> listOfConnectedClients;
 
@@ -66,79 +66,95 @@ public class SubjectRegistration {
 	 * @throws RandomGeneratorException
 	 */
 	void prepareClientToSubjectMatching(Session session) throws RandomGeneratorException {
-
 		RunStateLogger.getInstance().setAllSubjectsConnected(false);
 		subjectList = new ArrayList<Subject>();
+		humanSubjectList = new ArrayList<Subject>();
+		agentSubjectList = new ArrayList<Subject>();
 
 		for (Cohort cohort : session.getCohorts()) {
 			subjectList.addAll(cohort.getSubjects());
 		}
 
-		//Anzahl der Rollen abfragen
-		int count = 0;
-		ArrayList<String> AllRoles = new ArrayList<>();
-		for (Subject s: subjectList){
-			AllRoles.add(s.getRole());
-		}
+		if (session.getName().startsWith("HA")) {
 
-		int res = 1;
-		// Pick all elements one by one
-		for (int i = 1; i < AllRoles.size(); i++)
-		{
-			int j = 0;
-			for (j = 0; j < i; j++)
-				if (AllRoles.get(i) == AllRoles.get(j))
-					break;
+			//Number of roles
+			int count = 0;
+			ArrayList<String> AllRoles = new ArrayList<>();
+			for (Subject s : subjectList) {
+				AllRoles.add(s.getRole());
+			}
 
-			// If not printed earlier,
-			// then print it
-			if (i == j)
-				res++;
-		}
+			int res = 1;
+			// Pick all elements one by one
+			for (int i = 1; i < AllRoles.size(); i++) {
+				int j = 0;
+				for (j = 0; j < i; j++)
+					if (AllRoles.get(i) == AllRoles.get(j))
+						break;
 
-		System.out.println("Anzahl Firmen" + res);
+				// If not printed earlier,
+				// then print it
+				if (i == j)
+					res++;
+			}
 
-		//Select Random Firm
-		String[] firmarray = new String[res];
-		if (res==3){
-			firmarray[0]="Firma A";
-			firmarray[1]="Firma B";
-			firmarray[2]="Firma C";
-		}
-		else {
-			firmarray[0] = "Firma A";
-			firmarray[1] = "Firma B";
-		}
+			System.out.println("Anzahl Firmen" + res);
+			System.out.println("Session Name:" + session.getName());
 
-		int rnd = new Random().nextInt(firmarray.length);
-		String RandomFirm = firmarray[rnd];
-
-
-		// UC modification add: start
-		// Divide subject list according to role:
-		// humanSubjectList is designed to contain subjects that have been assigned with roles of firm A and firm B
-		// agentSubjectList is designed to contain subjects that have been assigned with role of firm E
-		humanSubjectList = new ArrayList<Subject>();
-		agentSubjectList = new ArrayList<Subject>();
-
-		for (Subject s: subjectList) {
-			if (s.getRole().equals(RandomFirm)) {
-				agentSubjectList.add(s);
+			//Select Random Firm
+			String[] firmarray = new String[res];
+			if (res == 3) {
+				firmarray[0] = "Firma A";
+				firmarray[1] = "Firma B";
+				firmarray[2] = "Firma C";
 			} else {
-				humanSubjectList.add(s);
+				firmarray[0] = "Firma A";
+				firmarray[1] = "Firma B";
+			}
+
+			int rnd = new Random().nextInt(firmarray.length);
+			String RandomFirm = firmarray[rnd];
+
+
+			// UC modification add: start
+			// Divide subject list according to role:
+			// humanSubjectList is designed to contain subjects that have been assigned with roles of firm A and firm B
+			// agentSubjectList is designed to contain subjects that have been assigned with role of firm E
+
+
+			for (Subject s : subjectList) {
+				if (s.getRole().equals(RandomFirm)) {
+					agentSubjectList.add(s);
+				} else {
+					humanSubjectList.add(s);
+				}
+			}
+			// UC modification add: end
+
+			numberOfSubjects = subjectList.size();
+
+			if (runStateLogger.getContinueSessionFlag() == false) {
+
+				// UC modification replace: start
+				//randomSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, numberOfSubjects - 1);
+				randomAgentSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, agentSubjectList.size() - 1);
+				randomHumanSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, humanSubjectList.size() - 1);
+				// UC modification replace: end
 			}
 		}
-		// UC modification add: end
 
-		numberOfSubjects = subjectList.size();
+		else {
 
-		if (runStateLogger.getContinueSessionFlag() == false) {
+			numberOfSubjects = subjectList.size();
 
-			// UC modification replace: start
-			//randomSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, numberOfSubjects - 1);
-			randomAgentSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, agentSubjectList.size() - 1);
-			randomHumanSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, humanSubjectList.size() - 1);
-			// UC modification replace: end
+			if (runStateLogger.getContinueSessionFlag() == false) {
+
+				randomSubjectNumbers = randomNumberGenerator.generateNonRepeatingIntegers(0, numberOfSubjects - 1);
+
+			}
+
+			System.out.println("Normale Session wird angelegt mit Anzahl Spieler: " + subjectList.size() + " und zufälliger Zahl: " +randomSubjectNumbers);
+
 		}
 
 	}
@@ -158,28 +174,33 @@ public class SubjectRegistration {
 		if (runStateLogger.getContinueSessionFlag() == false && runStateLogger.getAllSubjectsConnected() == false) {
 
 			messageSender.registerClient(clientRegistrationMessage);
-
+			Subject subject;
 			// UC modification replace: start
 			// Added custom matching for UpstreamCompetition experiment
 			// if client id identifies client as agent assign role of firm E, otherwise assign firm A or firm B
+			if (humanSubjectList.isEmpty()){
+				int randomNumber = randomSubjectNumbers.get(numberOfRegisteredSubjects);
+				subject = subjectList.get(randomNumber);
+			}
+			else{
+				// Deleted:
+				// int randomNumber = randomSubjectNumbers.get(numberOfRegisteredSubjects);
+				// Subject subject = subjectList.get(randomNumber);
 
-			// Deleted:
-			// int randomNumber = randomSubjectNumbers.get(numberOfRegisteredSubjects);
-			// Subject subject = subjectList.get(randomNumber);
-			Subject subject;
-			int randomNumber;
-			if (clientId.startsWith("agent")) {
-				randomNumber = randomAgentSubjectNumbers.get(numberOfRegisteredAgents);
-				subject = agentSubjectList.get(randomNumber);
-				numberOfRegisteredAgents++;
-				System.out.println("Registered agent: clientId = "+clientId+", assigned role = "+subject.getRole()+" in cohort "+subject.getCohort().getIdCohort());
+				int randomNumber;
+				if (clientId.startsWith("agent")) {
+					randomNumber = randomAgentSubjectNumbers.get(numberOfRegisteredAgents);
+					subject = agentSubjectList.get(randomNumber);
+					numberOfRegisteredAgents++;
+					System.out.println("Registered agent: clientId = " + clientId + ", assigned role = " + subject.getRole() + " in cohort " + subject.getCohort().getIdCohort());
 
-			} else {
-				System.out.println("Register human");
-				randomNumber = randomHumanSubjectNumbers.get(numberOfRegisteredHumans);
-				subject = humanSubjectList.get(randomNumber);
-				numberOfRegisteredHumans++;
-				System.out.println("Registered human: clientId = "+clientId+", assigned role = "+subject.getRole()+" in cohort "+subject.getCohort().getIdCohort());
+				} else {
+					System.out.println("Register human");
+					randomNumber = randomHumanSubjectNumbers.get(numberOfRegisteredHumans);
+					subject = humanSubjectList.get(randomNumber);
+					numberOfRegisteredHumans++;
+					System.out.println("Registered human: clientId = " + clientId + ", assigned role = " + subject.getRole() + " in cohort " + subject.getCohort().getIdCohort());
+				}
 			}
 			// UC modification replace: end
 
