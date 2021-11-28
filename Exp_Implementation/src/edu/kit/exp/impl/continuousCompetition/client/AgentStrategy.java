@@ -118,16 +118,34 @@ public class AgentStrategy {
         //Check Role for Agent:
         System.out.println("Rolle des Agenten:" + myRole);
 
+        double profitcoefficient = 1;
+        if (agentCore.isTriopolyTreatment==false){
+            if (agentCore.isCournotTreatment==false){
+                profitcoefficient = 1.25;
+            }
+            else if (agentCore.isCournotTreatment==true){
+                profitcoefficient = 1;
+            }
+        }
+        else if (agentCore.isTriopolyTreatment==true){
+            if (agentCore.isCournotTreatment==false){
+                profitcoefficient = 2.3625;
+            }
+            else if (agentCore.isCournotTreatment==true){
+                profitcoefficient = 1.5625;
+            }
+        }
 
+        System.out.println("Der Profitkoeffizient ist: " + profitcoefficient);
 
 
         if (agentCore.isTriopolyTreatment == false) {
             // Set new action according to the Q-Matrix and update Q-Matrix
             if (myRole == 0) {
-                updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
+                updateMatrix(myLastAction, marketUpdate.getaFirmA()*marketUpdate.getoFirmA()*profitcoefficient, marketUpdate);
                 newAction=runEpisode(marketUpdate);
             } else if (myRole == 1) {
-                updateMatrix(myLastAction, (marketUpdate.getaFirmB()*marketUpdate.getoFirmB()), marketUpdate);
+                updateMatrix(myLastAction, marketUpdate.getaFirmB()*marketUpdate.getoFirmB()*profitcoefficient, marketUpdate);
                 newAction=runEpisode(marketUpdate);
             }
 
@@ -135,23 +153,20 @@ public class AgentStrategy {
         }
         else if(agentCore.isTriopolyTreatment==true){
             if (myRole == 0) {
-                //newAction = selectAction((marketUpdate.getaFirmB()+marketUpdate.getaFirmC())/2);
-                updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
+                updateMatrix(myLastAction, marketUpdate.getaFirmA()*marketUpdate.getoFirmA()*profitcoefficient, marketUpdate);
                 newAction=runEpisode(marketUpdate);
             } else if (myRole == 1) {
-                //newAction = selectAction((marketUpdate.getaFirmA()+marketUpdate.getaFirmC())/2);
-                updateMatrix(myLastAction, (marketUpdate.getaFirmB()*marketUpdate.getoFirmB()), marketUpdate);
+                updateMatrix(myLastAction, marketUpdate.getaFirmB()*marketUpdate.getoFirmB()*profitcoefficient, marketUpdate);
                 newAction=runEpisode(marketUpdate);
             }
             else if (myRole == 2) {
-                //newAction = selectAction((marketUpdate.getaFirmB() + marketUpdate.getaFirmC()) / 2);
-                updateMatrix(myLastAction, (marketUpdate.getaFirmA()*marketUpdate.getoFirmA()), marketUpdate);
+                updateMatrix(myLastAction, marketUpdate.getaFirmC()*marketUpdate.getoFirmC()*profitcoefficient, marketUpdate);
                 newAction=runEpisode(marketUpdate);
             }
         }
 
         //Just to check Q-Matrix Updates
-        printq();
+        //printq();
 
 
         // newAction = (int) marketUpdate.getaFirmA();
