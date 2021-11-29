@@ -213,26 +213,26 @@ public class AgentStrategy {
         else if (agentCore.isTriopolyTreatment==true){
             if (myRole == 0) {
                 if (marketUpdate.getaFirmB()<marketUpdate.getaFirmC()){
-                    result = (marketUpdate.getaFirmB());
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmB()+(1- parameter.gamma)* marketUpdate.getaFirmC());
                 }
                 else {
-                    result = (marketUpdate.getaFirmC());
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmC()+(1- parameter.gamma)* marketUpdate.getaFirmB());
                 }
             }
             else if (myRole == 1) {
                 if (marketUpdate.getaFirmA()<marketUpdate.getaFirmC()){
-                    result = (marketUpdate.getaFirmA());
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmA()+(1- parameter.gamma)* marketUpdate.getaFirmC());
                 }
                 else {
-                    result = (marketUpdate.getaFirmC());
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmC()+(1- parameter.gamma)* marketUpdate.getaFirmA());
                 }
             }
             else if (myRole == 2) {
                 if (marketUpdate.getaFirmA()<marketUpdate.getaFirmB()){
-                    result = (marketUpdate.getaFirmA());
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmA()+(1- parameter.gamma)* marketUpdate.getaFirmB()));
                 }
                 else {
-                    result = (marketUpdate.getaFirmB());
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmB()+(1- parameter.gamma)* marketUpdate.getaFirmA()));
                 }
             }
         }
