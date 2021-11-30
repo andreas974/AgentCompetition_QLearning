@@ -1,1 +1,1 @@
-java -Djava.policy=java.policy -jar AgentCompetition.jar -s
+java -Djava.policy=java.policy -jar AgentCompetition_QLearning.jar -s

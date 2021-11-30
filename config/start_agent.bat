@@ -1,1 +1,1 @@
-java -Djava.policy=java.policy -jar AgentCompetition.jar -c -server 127.0.0.1 -clientid agent
+java -Djava.policy=java.policy -jar AgentCompetition_QLearning.jar -c -server 127.0.0.1 -clientid agent

@@ -69,18 +69,44 @@ public class AgentStrategy {
         int initAction = 0;
         if (agentCore.isTriopolyTreatment==false) {
             if (agentCore.isCournotTreatment==false){
-                initAction = 25;
+                if (myRole==0){
+                    initAction = 41;
+                }
+                else if (myRole==1){
+                    initAction = 43;
+                }
             }
             else if (agentCore.isCournotTreatment==true){
-                initAction = 38;
+                if (myRole==0){
+                    initAction = 52;
+                }
+                else if (myRole==1){
+                    initAction = 48;
+                }
             }
         }
         else if (agentCore.isTriopolyTreatment==true){
             if (agentCore.isCournotTreatment==false){
-                initAction = 17;
+                if (myRole==0){
+                    initAction = 37;
+                }
+                else if (myRole==1){
+                    initAction = 37;
+                }
+                else if (myRole==2){
+                    initAction = 36;
+                }
             }
             else if (agentCore.isCournotTreatment==true){
-                initAction = 30;
+                if (myRole==0){
+                    initAction = 55;
+                }
+                else if (myRole==1){
+                    initAction = 49;
+                }
+                else if (myRole==2){
+                    initAction = 46;
+                }
             }
         }
         readcsv();
