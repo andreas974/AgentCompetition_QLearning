@@ -1,0 +1,280 @@
+2021-11-27 16:37:25,774 AWT-EventQueue-0 WARN  server.ContinuousCompetitionSubjectMatcher - loop index of subjectGroups 0
+2021-11-27 16:37:25,792 AWT-EventQueue-0 WARN  server.ContinuousCompetitionSubjectMatcher - loop index of subjectGroups 0
+2021-11-27 16:37:56,697 PeriodThread INFO  server.ContinuousCompetitionInstitution - Started ContinuousCompetitionInstitution for cohort 791 with diffParam = 0.6666666666666666
+2021-11-27 16:37:56,698 PeriodThread WARN  server.ContinuousCompetitionInstitution - startPeriod() - start of execution
+2021-11-27 16:37:56,698 PeriodThread INFO  server.ContinuousCompetitionInstitution - Initialized practice round action data.
+2021-11-27 16:37:56,699 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 0.0, aFirmB: 0.0, aFirmC: 0.0, aFirmD: 0.0, aMarket: 0.0.
+2021-11-27 16:37:56,699 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 42.85714285714286, oFirmB: 42.85714285714286, oFirmC: 42.85714285714286, oFirmD: 0.0.
+2021-11-27 16:37:56,700 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 0.0, profitFirmB: 0.0, profitFirmC: 0.0, profitFirmD: 0.0
+2021-11-27 16:37:56,700 PeriodThread INFO  server.ContinuousCompetitionInstitution - Action variables before initial market update: aFirmA: 0.0, aFirmB: 0.0, aFirmC: 0.0, aFirmD: 0.0.
+2021-11-27 16:37:56,700 PeriodThread INFO  server.ContinuousCompetitionInstitution - Profit variables before initial market update: profitFirmA: 0.0, profitFirmB: 0.0, profitFirmC: 0.0, profitFirmD: 0.0
+2021-11-27 16:37:56,700 PeriodThread INFO  server.ContinuousCompetitionInstitution - Balance variables before initial market update: balanceFirmA: 0.0, balanceFirmB: 0.0, balanceFirmC: 0.0, balanceFirmD: 0.0
+2021-11-27 16:37:58,769 PeriodThread INFO  server.ContinuousCompetitionInstitution - countPracticeFinished was updated to 1 (client agent1). MembershipCount is set to 3.
+2021-11-27 16:38:04,164 PeriodThread INFO  server.ContinuousCompetitionInstitution - countPracticeFinished was updated to 2 (client client3). MembershipCount is set to 3.
+2021-11-27 16:38:12,525 PeriodThread INFO  server.ContinuousCompetitionInstitution - countPracticeFinished was updated to 3 (client client1). MembershipCount is set to 3.
+2021-11-27 16:38:16,529 PeriodThread WARN  server.ContinuousCompetitionInstitution - endPeriod()
+2021-11-27 16:38:16,543 PeriodThread INFO  server.ContinuousCompetitionInstitution - Started ContinuousCompetitionInstitution for cohort 792 with diffParam = 0.6666666666666666
+2021-11-27 16:38:16,544 PeriodThread WARN  server.ContinuousCompetitionInstitution - startPeriod() - start of execution
+2021-11-27 16:38:16,544 PeriodThread INFO  server.ContinuousCompetitionInstitution - Initialized regular round action data.
+2021-11-27 16:38:16,544 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 50.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 27.5.
+2021-11-27 16:38:16,544 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 54.00000000000001, oFirmB: 0.0, oFirmC: 33.00000000000001, oFirmD: 0.0.
+2021-11-27 16:38:16,544 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 51.03000000000001, profitFirmB: 0.0, profitFirmC: 40.28062500000001, profitFirmD: 0.0
+2021-11-27 16:38:16,545 PeriodThread INFO  server.ContinuousCompetitionInstitution - Action variables before initial market update: aFirmA: 24.0, aFirmB: 50.0, aFirmC: 31.0, aFirmD: 0.0.
+2021-11-27 16:38:16,545 PeriodThread INFO  server.ContinuousCompetitionInstitution - Profit variables before initial market update: profitFirmA: 51.03000000000001, profitFirmB: 0.0, profitFirmC: 40.28062500000001, profitFirmD: 0.0
+2021-11-27 16:38:16,545 PeriodThread INFO  server.ContinuousCompetitionInstitution - Balance variables before initial market update: balanceFirmA: 0.0, balanceFirmB: 0.0, balanceFirmC: 0.0, balanceFirmD: 0.0
+2021-11-27 16:38:16,590 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received ready message from clientclient3
+2021-11-27 16:38:16,612 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received ready message from clientclient1
+2021-11-27 16:38:16,702 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received ready message from clientagent1
+2021-11-27 16:38:16,702 PeriodThread INFO  server.ContinuousCompetitionInstitution - All clients reported ready stated. Sending start signal
+2021-11-27 16:38:17,215 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 0 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:17,229 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 0 of cohort 792.
+2021-11-27 16:38:17,229 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 0 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:17,236 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 0 of cohort 792.
+2021-11-27 16:38:17,239 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 0 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:17,247 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 0 of cohort 792.
+2021-11-27 16:38:17,247 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:17,247 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:17,248 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:17,248 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.006075, balanceFirmB: 0.006075, balanceFirmC: 0.0035746874999999997, balanceFirmD: 0.0
+2021-11-27 16:38:17,252 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 0 and to countId: 0.
+2021-11-27 16:38:17,257 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 0
+2021-11-27 16:38:17,717 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 1 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:17,722 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 1 of cohort 792.
+2021-11-27 16:38:17,722 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 1 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:17,727 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 1 of cohort 792.
+2021-11-27 16:38:17,743 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 1 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:17,747 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 1 of cohort 792.
+2021-11-27 16:38:17,747 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:17,747 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:17,747 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:17,747 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.01215, balanceFirmB: 0.01215, balanceFirmC: 0.0071493749999999995, balanceFirmD: 0.0
+2021-11-27 16:38:17,751 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 500 and to countId: 1.
+2021-11-27 16:38:17,754 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 1
+2021-11-27 16:38:18,221 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 2 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:18,226 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 2 of cohort 792.
+2021-11-27 16:38:18,226 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 2 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:18,231 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 2 of cohort 792.
+2021-11-27 16:38:18,246 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 2 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:18,250 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 2 of cohort 792.
+2021-11-27 16:38:18,250 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:18,250 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:18,251 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:18,251 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.018224999999999998, balanceFirmB: 0.018224999999999998, balanceFirmC: 0.0107240625, balanceFirmD: 0.0
+2021-11-27 16:38:18,253 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 1000 and to countId: 2.
+2021-11-27 16:38:18,257 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 2
+2021-11-27 16:38:18,725 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 3 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:18,729 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 3 of cohort 792.
+2021-11-27 16:38:18,729 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 3 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:18,734 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 3 of cohort 792.
+2021-11-27 16:38:18,748 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 3 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:18,753 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 3 of cohort 792.
+2021-11-27 16:38:18,754 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:18,754 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:18,754 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:18,754 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.0243, balanceFirmB: 0.0243, balanceFirmC: 0.014298749999999999, balanceFirmD: 0.0
+2021-11-27 16:38:18,759 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 1500 and to countId: 3.
+2021-11-27 16:38:18,764 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 3
+2021-11-27 16:38:19,230 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 4 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:19,234 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 4 of cohort 792.
+2021-11-27 16:38:19,234 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 4 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:19,238 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 4 of cohort 792.
+2021-11-27 16:38:19,250 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 4 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:19,255 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 4 of cohort 792.
+2021-11-27 16:38:19,255 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:19,256 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:19,256 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:19,256 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.030375, balanceFirmB: 0.030375, balanceFirmC: 0.0178734375, balanceFirmD: 0.0
+2021-11-27 16:38:19,259 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 2000 and to countId: 4.
+2021-11-27 16:38:19,263 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 4
+2021-11-27 16:38:19,733 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 5 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:19,738 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 5 of cohort 792.
+2021-11-27 16:38:19,738 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 5 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:19,742 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 5 of cohort 792.
+2021-11-27 16:38:19,751 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 5 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:19,756 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 5 of cohort 792.
+2021-11-27 16:38:19,756 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:19,756 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:19,757 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:19,757 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.036449999999999996, balanceFirmB: 0.036449999999999996, balanceFirmC: 0.021448125, balanceFirmD: 0.0
+2021-11-27 16:38:19,760 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 2500 and to countId: 5.
+2021-11-27 16:38:19,765 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 5
+2021-11-27 16:38:20,238 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 6 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:20,242 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 6 of cohort 792.
+2021-11-27 16:38:20,242 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 6 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:20,246 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 6 of cohort 792.
+2021-11-27 16:38:20,255 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 6 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:20,258 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 6 of cohort 792.
+2021-11-27 16:38:20,258 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:20,259 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:20,259 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:20,259 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.04252499999999999, balanceFirmB: 0.04252499999999999, balanceFirmC: 0.025022812499999998, balanceFirmD: 0.0
+2021-11-27 16:38:20,261 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 3000 and to countId: 6.
+2021-11-27 16:38:20,265 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 6
+2021-11-27 16:38:20,744 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 7 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:20,750 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 7 of cohort 792.
+2021-11-27 16:38:20,751 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 7 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:20,756 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 7 of cohort 792.
+2021-11-27 16:38:20,760 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 7 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:20,763 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 7 of cohort 792.
+2021-11-27 16:38:20,764 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:20,764 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:20,764 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:20,764 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.04859999999999999, balanceFirmB: 0.04859999999999999, balanceFirmC: 0.028597499999999998, balanceFirmD: 0.0
+2021-11-27 16:38:20,768 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 3500 and to countId: 7.
+2021-11-27 16:38:20,778 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 7
+2021-11-27 16:38:21,246 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 8 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:21,252 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 8 of cohort 792.
+2021-11-27 16:38:21,253 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 8 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:21,258 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 8 of cohort 792.
+2021-11-27 16:38:21,263 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 8 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:21,268 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 8 of cohort 792.
+2021-11-27 16:38:21,268 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:21,268 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:21,268 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:21,269 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.05467499999999999, balanceFirmB: 0.05467499999999999, balanceFirmC: 0.0321721875, balanceFirmD: 0.0
+2021-11-27 16:38:21,271 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 4000 and to countId: 8.
+2021-11-27 16:38:21,276 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 8
+2021-11-27 16:38:21,745 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 9 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:21,751 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 9 of cohort 792.
+2021-11-27 16:38:21,752 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 9 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:21,758 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 9 of cohort 792.
+2021-11-27 16:38:21,766 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 9 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:21,770 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 9 of cohort 792.
+2021-11-27 16:38:21,770 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:21,770 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:21,770 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:21,771 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.060749999999999985, balanceFirmB: 0.060749999999999985, balanceFirmC: 0.035746875, balanceFirmD: 0.0
+2021-11-27 16:38:21,774 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 4500 and to countId: 9.
+2021-11-27 16:38:21,780 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 9
+2021-11-27 16:38:22,245 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 10 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:22,249 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 10 of cohort 792.
+2021-11-27 16:38:22,249 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 10 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:22,253 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 10 of cohort 792.
+2021-11-27 16:38:22,270 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 10 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:22,273 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 10 of cohort 792.
+2021-11-27 16:38:22,273 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:22,274 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:22,274 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:22,274 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.06682499999999998, balanceFirmB: 0.06682499999999998, balanceFirmC: 0.0393215625, balanceFirmD: 0.0
+2021-11-27 16:38:22,276 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 5000 and to countId: 10.
+2021-11-27 16:38:22,281 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 10
+2021-11-27 16:38:22,747 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 11 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:22,752 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 11 of cohort 792.
+2021-11-27 16:38:22,753 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 11 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:22,757 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 11 of cohort 792.
+2021-11-27 16:38:22,773 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 11 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:22,777 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 11 of cohort 792.
+2021-11-27 16:38:22,777 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:22,778 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:22,778 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:22,778 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.07289999999999998, balanceFirmB: 0.07289999999999998, balanceFirmC: 0.04289625, balanceFirmD: 0.0
+2021-11-27 16:38:22,780 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 5500 and to countId: 11.
+2021-11-27 16:38:22,785 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 11
+2021-11-27 16:38:23,249 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 12 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:23,255 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 12 of cohort 792.
+2021-11-27 16:38:23,255 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 12 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:23,267 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 12 of cohort 792.
+2021-11-27 16:38:23,274 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 12 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:23,277 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 12 of cohort 792.
+2021-11-27 16:38:23,277 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:23,277 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:23,277 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:23,277 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.07897499999999998, balanceFirmB: 0.07897499999999998, balanceFirmC: 0.0464709375, balanceFirmD: 0.0
+2021-11-27 16:38:23,279 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 6000 and to countId: 12.
+2021-11-27 16:38:23,284 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 12
+2021-11-27 16:38:23,752 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 13 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:23,755 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 13 of cohort 792.
+2021-11-27 16:38:23,755 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 13 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:23,758 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 13 of cohort 792.
+2021-11-27 16:38:23,781 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 13 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:23,785 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 13 of cohort 792.
+2021-11-27 16:38:23,785 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:23,785 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:23,785 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:23,786 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.08504999999999997, balanceFirmB: 0.08504999999999997, balanceFirmC: 0.050045624999999996, balanceFirmD: 0.0
+2021-11-27 16:38:23,788 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 6500 and to countId: 13.
+2021-11-27 16:38:23,794 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 13
+2021-11-27 16:38:24,255 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 14 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:24,259 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 14 of cohort 792.
+2021-11-27 16:38:24,259 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 14 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:24,262 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 14 of cohort 792.
+2021-11-27 16:38:24,279 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 14 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:24,282 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 14 of cohort 792.
+2021-11-27 16:38:24,282 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:24,283 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:24,283 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:24,283 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.09112499999999997, balanceFirmB: 0.09112499999999997, balanceFirmC: 0.053620312499999996, balanceFirmD: 0.0
+2021-11-27 16:38:24,285 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 7000 and to countId: 14.
+2021-11-27 16:38:24,291 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 14
+2021-11-27 16:38:24,759 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 15 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:24,763 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 15 of cohort 792.
+2021-11-27 16:38:24,763 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 15 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:24,766 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 15 of cohort 792.
+2021-11-27 16:38:24,781 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 15 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:24,783 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 15 of cohort 792.
+2021-11-27 16:38:24,783 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:24,784 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:24,784 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:24,784 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.09719999999999997, balanceFirmB: 0.09719999999999997, balanceFirmC: 0.057194999999999996, balanceFirmD: 0.0
+2021-11-27 16:38:24,787 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 7500 and to countId: 15.
+2021-11-27 16:38:24,794 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 15
+2021-11-27 16:38:25,261 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 16 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:25,266 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 16 of cohort 792.
+2021-11-27 16:38:25,266 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 16 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:25,270 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 16 of cohort 792.
+2021-11-27 16:38:25,286 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 16 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:25,291 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 16 of cohort 792.
+2021-11-27 16:38:25,291 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:25,291 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:25,292 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:25,292 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.10327499999999996, balanceFirmB: 0.10327499999999996, balanceFirmC: 0.060769687499999996, balanceFirmD: 0.0
+2021-11-27 16:38:25,294 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 8000 and to countId: 16.
+2021-11-27 16:38:25,299 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 16
+2021-11-27 16:38:25,764 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 17 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:25,767 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 17 of cohort 792.
+2021-11-27 16:38:25,768 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 17 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:25,772 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 17 of cohort 792.
+2021-11-27 16:38:25,787 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 17 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:25,789 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 17 of cohort 792.
+2021-11-27 16:38:25,790 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:25,790 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:25,790 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:25,790 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.10934999999999996, balanceFirmB: 0.10934999999999996, balanceFirmC: 0.064344375, balanceFirmD: 0.0
+2021-11-27 16:38:25,792 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 8500 and to countId: 17.
+2021-11-27 16:38:25,797 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 17
+2021-11-27 16:38:26,264 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 18 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:26,268 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 18 of cohort 792.
+2021-11-27 16:38:26,268 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 18 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:26,271 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 18 of cohort 792.
+2021-11-27 16:38:26,287 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 18 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:26,291 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 18 of cohort 792.
+2021-11-27 16:38:26,291 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:26,292 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:26,292 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:26,292 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.11542499999999996, balanceFirmB: 0.11542499999999996, balanceFirmC: 0.06791906249999999, balanceFirmD: 0.0
+2021-11-27 16:38:26,295 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 9000 and to countId: 18.
+2021-11-27 16:38:26,300 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 18
+2021-11-27 16:38:26,769 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 19 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:26,773 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 19 of cohort 792.
+2021-11-27 16:38:26,773 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 19 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:26,777 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 19 of cohort 792.
+2021-11-27 16:38:26,788 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 19 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:26,791 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 19 of cohort 792.
+2021-11-27 16:38:26,791 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:26,791 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:26,791 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:26,791 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.12149999999999996, balanceFirmB: 0.12149999999999996, balanceFirmC: 0.07149375, balanceFirmD: 0.0
+2021-11-27 16:38:26,793 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 9500 and to countId: 19.
+2021-11-27 16:38:26,797 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 19
+2021-11-27 16:38:27,272 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 20 from client client3: Set aFirmA = 24.0
+2021-11-27 16:38:27,276 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 1 of 3 with countId 20 of cohort 792.
+2021-11-27 16:38:27,276 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 20 from client client1: Set aFirmC = 31.0
+2021-11-27 16:38:27,280 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 2 of 3 with countId 20 of cohort 792.
+2021-11-27 16:38:27,294 PeriodThread INFO  server.ContinuousCompetitionInstitution - Receiving actionUpdate with countId 20 from client agent1: Set aFirmB = 24.0
+2021-11-27 16:38:27,299 PeriodThread INFO  server.ContinuousCompetitionInstitution - Received actionUpdate is number 3 of 3 with countId 20 of cohort 792.
+2021-11-27 16:38:27,300 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: actions - aFirmA: 24.0, aFirmB: 24.0, aFirmC: 31.0, aFirmD: 0.0, aMarket: 26.333333333333332.
+2021-11-27 16:38:27,300 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: outputs - oFirmA: 38.57142857142857, oFirmB: 38.57142857142857, oFirmC: 17.57142857142857, oFirmD: 0.0.
+2021-11-27 16:38:27,300 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: profits - profitFirmA: 36.449999999999996, profitFirmB: 36.449999999999996, profitFirmC: 21.448124999999997, profitFirmD: 0.0
+2021-11-27 16:38:27,300 PeriodThread INFO  server.ContinuousCompetitionInstitution - After calculation of market data: payoffs - balanceFirmA: 0.12757499999999997, balanceFirmB: 0.12757499999999997, balanceFirmC: 0.0750684375, balanceFirmD: 0.0
+2021-11-27 16:38:27,304 PeriodThread INFO  server.ContinuousCompetitionInstitution - Created marketUpdate is set to global time: 10000 and to countId: 20.
+2021-11-27 16:38:27,309 PeriodThread INFO  server.ContinuousCompetitionInstitution - processMessage() - end of execution - processed actionUpdate with countId 20

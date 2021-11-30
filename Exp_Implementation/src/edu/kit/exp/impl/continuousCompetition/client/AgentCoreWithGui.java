@@ -573,6 +573,7 @@ public class AgentCoreWithGui extends AgentCore {
         JLabel lblLogo = new JLabel("");
         lblLogo.setIcon(new ImageIcon(getClass().getResource("/edu/kit/exp/common/resources/kit_logo.png")));
         panel.add(lblLogo, BorderLayout.EAST);
+
         waitingPanel.add(panel, BorderLayout.NORTH);
 
         waitingPanel.setVisible(false);

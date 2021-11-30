@@ -1,0 +1,82 @@
+2021-11-09 13:57:13,600 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Started ContinuousCompetitionFirmScreen for client client 1 in cohort 405 with diffParam = 0.6666666666666666, discreteTreatment = false, practiceRound = true, myRole = Firma A
+2021-11-09 13:57:13,610 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Initialized CartDisplayPanel: timestep:  500, tduration: 1800000, t_mid_window: 150000, t_hatch: 15000, t_startLastWindow: 1650000
+2021-11-09 13:57:13,640 CLIENT MessageDeliveryThread WARN  client.ContinuousCompetitionFirmScreen - Local state of profit variables after initial market update: aFirmA: profitFirmA: 0.0, profitFirmB: 0.0, profitFirmC: 0.0
+2021-11-09 13:57:17,777 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 0 and time 0 in round 0 - pFirmA: 0.
+2021-11-09 13:57:17,778 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 0 before price update: pFirmA 0, pFirmB 0, pFirmC 0.
+2021-11-09 13:57:21,823 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Started ContinuousCompetitionFirmScreen for client client 1 in cohort 406 with diffParam = 0.6666666666666666, discreteTreatment = false, practiceRound = false, myRole = Firma A
+2021-11-09 13:57:21,825 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Initialized CartDisplayPanel: timestep:  500, tduration: 1800000, t_mid_window: 150000, t_hatch: 15000, t_startLastWindow: 1650000
+2021-11-09 13:57:21,846 CLIENT MessageDeliveryThread WARN  client.ContinuousCompetitionFirmScreen - Local state of profit variables after initial market update: aFirmA: profitFirmA: 0.0, profitFirmB: 7.812500000000007, profitFirmC: 0.0
+2021-11-09 13:57:21,848 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Firma A: sending ready message to server.
+2021-11-09 13:57:21,938 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 0 and globalTime 0 in cohort 406
+2021-11-09 13:57:21,938 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 25, pFirmC: 0, pMarket: 12.5
+2021-11-09 13:57:21,940 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 (role: Firma A) in cohort 406 also received start flag - starting timer.
+2021-11-09 13:57:22,444 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 0 and time 0 in round 0 - pFirmA: 0.
+2021-11-09 13:57:22,444 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 0 before price update: pFirmA 0, pFirmB 25, pFirmC 0.
+2021-11-09 13:57:22,447 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 0 to 500. Duration is set to: 1800000
+2021-11-09 13:57:22,488 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 0 and globalTime 0 in cohort 406
+2021-11-09 13:57:22,488 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 62, pFirmC: 0, pMarket: 0.0
+2021-11-09 13:57:22,945 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 1 and time 500 in round 1 - pFirmA: 0.
+2021-11-09 13:57:22,946 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 1 before price update: pFirmA 0, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:22,949 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 500 to 1000. Duration is set to: 1800000
+2021-11-09 13:57:22,979 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 1 and globalTime 500 in cohort 406
+2021-11-09 13:57:22,979 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 62, pFirmC: 0, pMarket: 0.0
+2021-11-09 13:57:23,448 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 2 and time 1000 in round 2 - pFirmA: 0.
+2021-11-09 13:57:23,448 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 2 before price update: pFirmA 0, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:23,449 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 1000 to 1500. Duration is set to: 1800000
+2021-11-09 13:57:23,481 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 2 and globalTime 1000 in cohort 406
+2021-11-09 13:57:23,482 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 62, pFirmC: 0, pMarket: 0.0
+2021-11-09 13:57:23,951 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 3 and time 1500 in round 3 - pFirmA: 0.
+2021-11-09 13:57:23,951 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 3 before price update: pFirmA 0, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:23,952 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 1500 to 2000. Duration is set to: 1800000
+2021-11-09 13:57:23,984 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 3 and globalTime 1500 in cohort 406
+2021-11-09 13:57:23,984 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 62, pFirmC: 0, pMarket: 0.0
+2021-11-09 13:57:24,455 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 4 and time 2000 in round 4 - pFirmA: 0.
+2021-11-09 13:57:24,455 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 4 before price update: pFirmA 0, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:24,458 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 2000 to 2500. Duration is set to: 1800000
+2021-11-09 13:57:24,489 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 4 and globalTime 2000 in cohort 406
+2021-11-09 13:57:24,490 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 62, pFirmC: 0, pMarket: 0.0
+2021-11-09 13:57:24,956 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 5 and time 2500 in round 5 - pFirmA: 0.
+2021-11-09 13:57:24,957 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 5 before price update: pFirmA 0, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:24,960 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 2500 to 3000. Duration is set to: 1800000
+2021-11-09 13:57:24,986 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 5 and globalTime 2500 in cohort 406
+2021-11-09 13:57:24,986 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 0 pFirmB: 62, pFirmC: 0, pMarket: 0.0
+2021-11-09 13:57:25,457 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 6 and time 3000 in round 6 - pFirmA: 5.
+2021-11-09 13:57:25,458 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 6 before price update: pFirmA 5, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:25,461 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 3000 to 3500. Duration is set to: 1800000
+2021-11-09 13:57:25,489 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 6 and globalTime 3000 in cohort 406
+2021-11-09 13:57:25,489 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 62, pFirmC: 0, pMarket: 5.0
+2021-11-09 13:57:25,958 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 7 and time 3500 in round 7 - pFirmA: 5.
+2021-11-09 13:57:25,959 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 7 before price update: pFirmA 5, pFirmB 62, pFirmC 0.
+2021-11-09 13:57:25,961 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 3500 to 4000. Duration is set to: 1800000
+2021-11-09 13:57:25,999 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 7 and globalTime 3500 in cohort 406
+2021-11-09 13:57:25,999 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0
+2021-11-09 13:57:26,462 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 8 and time 4000 in round 8 - pFirmA: 5.
+2021-11-09 13:57:26,462 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 8 before price update: pFirmA 5, pFirmB 29, pFirmC 0.
+2021-11-09 13:57:26,464 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 4000 to 4500. Duration is set to: 1800000
+2021-11-09 13:57:26,502 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 8 and globalTime 4000 in cohort 406
+2021-11-09 13:57:26,503 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0
+2021-11-09 13:57:26,966 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 9 and time 4500 in round 9 - pFirmA: 5.
+2021-11-09 13:57:26,966 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 9 before price update: pFirmA 5, pFirmB 29, pFirmC 0.
+2021-11-09 13:57:26,967 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 4500 to 5000. Duration is set to: 1800000
+2021-11-09 13:57:27,001 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 9 and globalTime 4500 in cohort 406
+2021-11-09 13:57:27,002 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0
+2021-11-09 13:57:27,467 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 10 and time 5000 in round 10 - pFirmA: 5.
+2021-11-09 13:57:27,467 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 10 before price update: pFirmA 5, pFirmB 29, pFirmC 0.
+2021-11-09 13:57:27,468 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 5000 to 5500. Duration is set to: 1800000
+2021-11-09 13:57:27,497 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 10 and globalTime 5000 in cohort 406
+2021-11-09 13:57:27,497 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0
+2021-11-09 13:57:27,968 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 11 and time 5500 in round 11 - pFirmA: 5.
+2021-11-09 13:57:27,968 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 11 before price update: pFirmA 5, pFirmB 29, pFirmC 0.
+2021-11-09 13:57:27,969 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 5500 to 6000. Duration is set to: 1800000
+2021-11-09 13:57:27,999 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 11 and globalTime 5500 in cohort 406
+2021-11-09 13:57:28,000 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0
+2021-11-09 13:57:28,468 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 12 and time 6000 in round 12 - pFirmA: 5.
+2021-11-09 13:57:28,468 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 12 before price update: pFirmA 5, pFirmB 29, pFirmC 0.
+2021-11-09 13:57:28,470 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 6000 to 6500. Duration is set to: 1800000
+2021-11-09 13:57:28,505 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 12 and globalTime 6000 in cohort 406
+2021-11-09 13:57:28,505 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0
+2021-11-09 13:57:28,971 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Firm A: Sending priceUpdate with countId 13 and time 6500 in round 13 - pFirmA: 5.
+2021-11-09 13:57:28,972 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Last state of local prices (sliders) in round 13 before price update: pFirmA 5, pFirmB 29, pFirmC 0.
+2021-11-09 13:57:28,975 AWT-EventQueue-0 INFO  client.ContinuousCompetitionFirmScreen - Timer: Advanced local time from 6500 to 7000. Duration is set to: 1800000
+2021-11-09 13:57:29,004 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Recipient client 1 received MarketUpdate with countId 13 and globalTime 6500 in cohort 406
+2021-11-09 13:57:29,005 CLIENT MessageDeliveryThread INFO  client.ContinuousCompetitionFirmScreen - Updating local market variables: pFirmA: 5 pFirmB: 29, pFirmC: 0, pMarket: 17.0

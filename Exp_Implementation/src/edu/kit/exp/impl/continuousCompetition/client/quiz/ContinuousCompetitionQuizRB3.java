@@ -50,6 +50,13 @@ public class ContinuousCompetitionQuizRB3 extends QuizScreen {
         question.addAnswer("Falsch", true);
         this.addQuizItem(question);
 
+        question = new QuizItemMultipleChoice("Welche der folgenden Aussagen zu den im Wettbewerb stehenden Firmen sind richtig?<br><i>Hinweis: Es kann mehrere richtige Antworten geben.</i>");
+        question.addAnswer("Alle Firmen werden von menschlichen Teilnehmenden des Experiments dargestellt.", true);
+        question.addAnswer("Eine Firma, mit der ich im Wettbewerb stehe, wird von einem Computeralgorithmus dargestellt.");
+        question.addAnswer("Welche Firma ich darstelle wird zu Beginn des Experiments zufällig bestimmt.", true);
+        question.addAnswer("Manche Firmen, mit denen ich im Wettbewerb stehe, werden von menschlichen Teilnehmenden des Experiments dargestellt. Eine Firma wird von einem Computeralgorithmus dargestellt.");
+        this.addQuizItem(question);
+
         question = new QuizItemMultipleChoice("Welche der folgenden Aussagen zur nachgefragten Menge Ihres Gutes sind richtig?<br><i>Hinweis: Es kann mehrere richtige Antworten geben.</i>");
         question.addAnswer("Wenn ich meinen Preis erhöhe, sinkt die nachgefragte Menge meines Gutes.", true);
         question.addAnswer("Wenn ich meinen Preis erhöhe, steigt die nachgefragte Menge meines Gutes.");

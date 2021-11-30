@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+  <persistence-unit name="ExpPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>edu.kit.exp.server.jpa.entity.Experiment</class>
+    <class>edu.kit.exp.server.jpa.entity.Treatment</class>
+    <class>edu.kit.exp.server.jpa.entity.Cohort</class>
+    <class>edu.kit.exp.server.jpa.entity.Period</class>
+    <class>edu.kit.exp.server.jpa.entity.Session</class>
+    <class>edu.kit.exp.server.jpa.entity.Subject</class>
+    <class>edu.kit.exp.server.jpa.entity.SubjectGroup</class>
+    <class>edu.kit.exp.server.jpa.entity.TreatmentBlock</class>
+    <class>edu.kit.exp.server.jpa.entity.Trial</class>
+    <class>edu.kit.exp.server.jpa.entity.SequenceElement</class>
+    <class>edu.kit.exp.server.jpa.entity.Pause</class>
+    <class>edu.kit.exp.server.jpa.entity.Protocol</class>
+    <class>edu.kit.exp.server.jpa.entity.Quiz</class>
+    <class>edu.kit.exp.server.jpa.entity.Membership</class>
+<properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5432/exp_db"/>
+      <property name="javax.persistence.jdbc.user" value="experiment"/>
+      <property name="javax.persistence.jdbc.password" value="experiment"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.schema" value="exp"/>
+      
+      <property name="eclipselink.jdbc.read-connections.shared" value="false"></property>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+    </properties>
+</persistence-unit>
+</persistence>

@@ -179,7 +179,6 @@ public class ClientGuiController {
 		if (defaultWaitingScreen == null) {
 			defaultWaitingScreen = new DefaultWaitingScreen(null, new DefaultWaitingScreen.ParamObject(), DefaultWaitingScreen.class.getName(), 0L);
 		}
-
 		messageSender.sendQuizProtocol(passed, quizSolution);
 		showScreen(defaultWaitingScreen);
 	}
