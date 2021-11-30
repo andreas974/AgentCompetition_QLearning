@@ -2,7 +2,7 @@
   <configuration default="false" name="Run Agent 7" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="edu.kit.exp.impl.run" />
     <module name="Exp_Implementation" />
-    <option name="PROGRAM_PARAMETERS" value="-c" />
+    <option name="PROGRAM_PARAMETERS" value="-c -server 127.0.0.1 -clientid agent7 -autologin" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
