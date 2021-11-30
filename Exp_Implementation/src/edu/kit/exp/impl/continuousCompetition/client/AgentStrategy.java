@@ -67,11 +67,21 @@ public class AgentStrategy {
         // For example: set action 25 as the initial action
 
         int initAction = 0;
-        if (agentCore.isCournotTreatment==true) {
-            initAction = 30;
+        if (agentCore.isTriopolyTreatment==false) {
+            if (agentCore.isCournotTreatment==false){
+                initAction = 25;
+            }
+            else if (agentCore.isCournotTreatment==true){
+                initAction = 38;
+            }
         }
-        else {
-            initAction = 50;
+        else if (agentCore.isTriopolyTreatment==true){
+            if (agentCore.isCournotTreatment==false){
+                initAction = 17;
+            }
+            else if (agentCore.isCournotTreatment==true){
+                initAction = 30;
+            }
         }
         readcsv();
         initQMatrix(readcsv());
@@ -166,7 +176,7 @@ public class AgentStrategy {
         }
 
         //Just to check Q-Matrix Updates
-        //printq();
+        printq();
 
 
         // newAction = (int) marketUpdate.getaFirmA();
@@ -229,10 +239,10 @@ public class AgentStrategy {
             }
             else if (myRole == 2) {
                 if (marketUpdate.getaFirmA()<marketUpdate.getaFirmB()){
-                    result = (int) (parameter.gamma*marketUpdate.getaFirmA()+(1- parameter.gamma)* marketUpdate.getaFirmB()));
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmA()+(1- parameter.gamma)* marketUpdate.getaFirmB());
                 }
                 else {
-                    result = (int) (parameter.gamma*marketUpdate.getaFirmB()+(1- parameter.gamma)* marketUpdate.getaFirmA()));
+                    result = (int) (parameter.gamma*marketUpdate.getaFirmB()+(1- parameter.gamma)* marketUpdate.getaFirmA());
                 }
             }
         }

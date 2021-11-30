@@ -50,12 +50,18 @@ public class ContinuousCompetitionQuizRB3_agent extends QuizScreen {
         question.addAnswer("Falsch", true);
         this.addQuizItem(question);
 
-        question = new QuizItemMultipleChoice("Welche der folgenden Aussagen sind richtig?<br><i>Hinweis: Es kann mehrere richtige Antworten geben.</i>");
-        question.addAnswer("Ich stehe ausschließlich mit Firmen im Wettbewerb, die von einem Computeralgorithmus dargestellt werden");
-        question.addAnswer("Ich stehe sowohl mit Firmen von menschlichen Experimentteilnehmern als auch von Computeralgorithmus im Wettbewerb", true);
-        question.addAnswer("Ich kann keine Aussage darüber treffen, welche Firma von einem Computeralgorithmus dargestellt wird", true);
-        question.addAnswer("Der eingesetzte Algorithmus optimiert sein Verhalten, indem er während des Experiments dazu lernt.", true);
+        question = new QuizItemMultipleChoice("Welche der folgenden Aussagen zu den im Wettbewerb stehenden Firmen sind richtig?<br><i>Hinweis: Es kann mehrere richtige Antworten geben.</i>");
+        question.addAnswer("Alle Firmen werden von menschlichen Teilnehmenden des Experiments dargestellt.");
+        question.addAnswer("Die Firma, mit der ich im Wettbewerb stehe, wird von einem Computeralgorithmus dargestellt.", true);
+        question.addAnswer("Welche Firma ich darstelle wird zu Beginn des Experiments zufällig bestimmt.", true);
+        question.addAnswer("Manche Firmen, mit denen ich im Wettbewerb stehe, werden von menschlichen Teilnehmenden des Experiments dargestellt. Eine Firma wird von einem Computeralgorithmus dargestellt.", true);
+        this.addQuizItem(question);
+
+        question = new QuizItemMultipleChoice("Welche der folgenden Aussagen zum Computeralgorithmus, der die Rolle einer Firma übernimmt, sind richtig? <br><i>Hinweis: Es kann mehrere richtige Antworten geben.</i>");
+        question.addAnswer("Der Algorithmus lernt während des Experiments in Abhängigkeit der gesetzten Mengen und Preise weiter dazu.", true);
         question.addAnswer("Der eingesetzte Algorithmus verhält sich rein zufällig unabhängig von meinem Verhalten.");
+        question.addAnswer("Das Ziel des Algorithmus ist es, einen möglichst hohen Gewinn zu erzielen.", true);
+        question.addAnswer("Der Algorithmus verfolgt unveränderliche Entscheidungsregeln basierend auf den gesetzten Preisen und Mengen.");
         this.addQuizItem(question);
 
         question = new QuizItemMultipleChoice("Welche der folgenden Aussagen zur nachgefragten Menge Ihres Gutes sind richtig?<br><i>Hinweis: Es kann mehrere richtige Antworten geben.</i>");

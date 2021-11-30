@@ -150,7 +150,7 @@ public class SessionThread extends Thread {
 		}
 
 		try {
-			messageSender.sendToALL(DefaultInfoScreen.class.getName(), new DefaultInfoScreen.ParamObject("<html><body><h1>End of the experimental session!</h1>Thank you!</body></html>"));
+			messageSender.sendToALL(DefaultInfoScreen.class.getName(), new DefaultInfoScreen.ParamObject("<html><body><h1>Ende des Experiments!</h1>Vielen Dank für Ihre Teilnahme!</body></html>"));
 		} catch (RemoteException e) {
 			runStateLogger.createOutputMessage("ERROR: " + e.getMessage());
 		}
