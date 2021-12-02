@@ -112,7 +112,7 @@ public class AgentStrategy {
         readcsv();
         initQMatrix(readcsv());
         //printMatrix(readcsv());
-        printq();
+        //printq();
         System.out.println("Parameter gesetzt auf Alpha: " + parameter.alpha + " und Delta: " + parameter.delta);
 
         // Initial action is sent to server
@@ -202,7 +202,7 @@ public class AgentStrategy {
         }
 
         //Just to check Q-Matrix Updates
-        printq();
+        //printq();
 
 
         // newAction = (int) marketUpdate.getaFirmA();
