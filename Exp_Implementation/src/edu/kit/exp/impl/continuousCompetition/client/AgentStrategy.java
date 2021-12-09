@@ -67,7 +67,7 @@ public class AgentStrategy {
         // For example: set action 25 as the initial action
 
         int initAction = 0;
-        if (agentCore.isTriopolyTreatment==false) {
+        /*if (agentCore.isTriopolyTreatment==false) {
             if (agentCore.isCournotTreatment==false){
                 if (myRole==0){
                     initAction = 41;
@@ -108,7 +108,52 @@ public class AgentStrategy {
                     initAction = 46;
                 }
             }
+        }*/
+
+        if (agentCore.isTriopolyTreatment==false) {
+            if (agentCore.isCournotTreatment==false){
+                if (myRole==0){
+                    initAction = 50;
+                }
+                else if (myRole==1){
+                    initAction = 50;
+                }
+            }
+            else if (agentCore.isCournotTreatment==true){
+                if (myRole==0){
+                    initAction = 52;
+                }
+                else if (myRole==1){
+                    initAction = 48;
+                }
+            }
         }
+        else if (agentCore.isTriopolyTreatment==true){
+            if (agentCore.isCournotTreatment==false){
+                if (myRole==0){
+                    initAction = 37;
+                }
+                else if (myRole==1){
+                    initAction = 37;
+                }
+                else if (myRole==2){
+                    initAction = 36;
+                }
+            }
+            else if (agentCore.isCournotTreatment==true){
+                if (myRole==0){
+                    initAction = 55;
+                }
+                else if (myRole==1){
+                    initAction = 49;
+                }
+                else if (myRole==2){
+                    initAction = 46;
+                }
+            }
+        }
+
+
         readcsv();
         initQMatrix(readcsv());
         //printMatrix(readcsv());
@@ -447,7 +492,7 @@ public class AgentStrategy {
                 path = "edu/kit/exp/common/resources/SIM_Q_2_Export.csv";
             }
             else if (!agentCore.isCournotTreatment){
-                path = "edu/kit/exp/common/resources/SIM_P_2_Export.csv";
+                path = "edu/kit/exp/common/resources/SEQ_P_2_Export.csv";
             }
         }
 
